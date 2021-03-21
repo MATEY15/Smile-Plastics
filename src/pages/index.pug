@@ -1,11 +1,27 @@
 extends ../templates/main
 
 block variables
-    - var title = 'XDLE'
+    - var title = 'Smile Plastics'
 
 block content
     main.main
 
         section.section
-            .container
-                p text
+            include ../blocks/slider-banner/slider-banner
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Reimagined Materials. Designed to Inspire.
+                    p.heading__description Smile Plastics materials design and manufacturing house creates supersized decorative panels for retail, architecture, interiors and product design. 100% recycled. 100% recyclable.
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            include ../blocks/product/product
+                        .col-lg-6
+                            .product
+                                .product__image-wrapper
+                                    +img("src/blocks/product/assets/img/product-image2.jpg", "product__image", "Product")
+                                .product__content
+                                    h4.product__name Classic Materials
+                                    p.product__desc The materials in our classics range are all lovingly hand-crafted, with every quirk, imperfection and mottle telling a different recycling story. Each sustainable material has been tried and tested in a wide range of applications
+                                    a(href="#").button.button--gray Classic range

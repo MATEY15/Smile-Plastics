@@ -2,8 +2,8 @@ mixin item(title, url)
     li
         a(href=url, class=active == title ? 'active' : '')= title
 
-mixin iconSvg(w, h, wp, id)
-    svg(width=w height=h viewBox=wp class=id)
+mixin iconSvg(w, h, id)
+    svg(width=w height=h class=id)
         use(xlink:href="/images/icons/sprites.svg#"+id)
 
 mixin iconSvgSocial(w, h, wp, id)

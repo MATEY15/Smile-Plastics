@@ -1,0 +1,47 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.slider-banner {
+
+  &__wrapper {
+    position: relative;
+  }
+
+  &__item {
+    position: relative;
+    min-height: 784px;
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__nav {
+    position: absolute;
+    top: 50%;
+    @include tt(0, -50%);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  &__nav--prev {
+    left: 20px;
+    svg {
+      transform: scale(-1);
+    }
+  }
+  &__nav--next {
+    right: 20px;
+  }
+
+}

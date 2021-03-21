@@ -1,0 +1,33 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 576px,
+        md: 768px,
+        lg: 992px,
+        xl: 1200px,
+        xxl: 1920px
+);
+
+$container-max-widths: (
+        sm: 540px,
+        md: 720px,
+        lg: 960px,
+        xl: 1200px,
+        xxl: 1918px
+);
+
+$colors: (
+        blue: #1799d3,
+        pink: #e20073
+);
+
+$theme-colors: (
+        primary: #1799d3,
+        pink: #e20073
+);
+
+$body-color: #444;
+$line-height-base: 1.2;

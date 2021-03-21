@@ -5,51 +5,31 @@
 // Use variable in file - variables.scss
 
 @font-face {
-  font-family: 'HelveticaNeueLTPro-UltLt';
+  font-family: 'UntitledSans-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url("assets/fonts/HelveticaNeueLTPro-UltLt/HelveticaNeueLTPro-UltLt.eot");
-  src: url("assets/fonts/HelveticaNeueLTPro-UltLt/HelveticaNeueLTPro-UltLt.eot?#iefix")format("embedded-opentype"),
-  url("assets/fonts/HelveticaNeueLTPro-UltLt/HelveticaNeueLTPro-UltLt.woff") format("woff"),
-  url("assets/fonts/HelveticaNeueLTPro-UltLt/HelveticaNeueLTPro-UltLt.ttf") format("truetype");
+  src: url("assets/fonts/UntitledSans-Regular/UntitledSans-Regular.eot");
+  src: url("assets/fonts/UntitledSans-Regular/UntitledSans-Regular.eot?#iefix")format("embedded-opentype"),
+  url("assets/fonts/UntitledSans-Regular/UntitledSans-Regular.woff") format("woff"),
+  url("assets/fonts/UntitledSans-Regular/UntitledSans-Regular.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLTPro-Lt';
+  font-family: 'UntitledSans-Medium';
   font-weight: normal;
   font-style: normal;
-  src: url("assets/fonts/HelveticaNeueLTPro-Lt/HelveticaNeueLTPro-Lt.eot");
-  src: url("assets/fonts/HelveticaNeueLTPro-Lt/HelveticaNeueLTPro-Lt.eot?#iefix")format("embedded-opentype"),
-  url("assets/fonts/HelveticaNeueLTPro-Lt/HelveticaNeueLTPro-Lt.woff") format("woff"),
-  url("assets/fonts/HelveticaNeueLTPro-Lt/HelveticaNeueLTPro-Lt.ttf") format("truetype");
+  src: url("assets/fonts/UntitledSans-Medium/UntitledSans-Medium.eot");
+  src: url("assets/fonts/UntitledSans-Medium/UntitledSans-Medium.eot?#iefix")format("embedded-opentype"),
+  url("assets/fonts/UntitledSans-Medium/UntitledSans-Medium.woff") format("woff"),
+  url("assets/fonts/UntitledSans-Medium/UntitledSans-Medium.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: 'HelveticaNeueLTPro-Bd';
+  font-family: 'SmilePlasticsStencil-Regular';
   font-weight: normal;
   font-style: normal;
-  src: url("assets/fonts/HelveticaNeueLTPro-Bd/HelveticaNeueLTPro-Bd.eot");
-  src: url("assets/fonts/HelveticaNeueLTPro-Bd/HelveticaNeueLTPro-Bd.eot?#iefix")format("embedded-opentype"),
-  url("assets/fonts/HelveticaNeueLTPro-Bd/HelveticaNeueLTPro-Bd.woff") format("woff"),
-  url("assets/fonts/HelveticaNeueLTPro-Bd/HelveticaNeueLTPro-Bd.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTPro-Md';
-  font-weight: normal;
-  font-style: normal;
-  src: url("assets/fonts/HelveticaNeueLTPro-Md/HelveticaNeueLTPro-Md.eot");
-  src: url("assets/fonts/HelveticaNeueLTPro-Md/HelveticaNeueLTPro-Md.eot?#iefix")format("embedded-opentype"),
-  url("assets/fonts/HelveticaNeueLTPro-Md/HelveticaNeueLTPro-Md.woff") format("woff"),
-  url("assets/fonts/HelveticaNeueLTPro-Md/HelveticaNeueLTPro-Md.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: 'HelveticaNeueLTPro-Blk';
-  font-weight: normal;
-  font-style: normal;
-  src: url("assets/fonts/HelveticaNeueLTPro-Blk/HelveticaNeueLTPro-Blk.eot");
-  src: url("assets/fonts/HelveticaNeueLTPro-Blk/HelveticaNeueLTPro-Blk.eot?#iefix")format("embedded-opentype"),
-  url("assets/fonts/HelveticaNeueLTPro-Blk/HelveticaNeueLTPro-Blk.woff") format("woff"),
-  url("assets/fonts/HelveticaNeueLTPro-Blk/HelveticaNeueLTPro-Blk.ttf") format("truetype");
+  src: url("assets/fonts/SmilePlasticsStencil-Regular/SmilePlasticsStencil-Regular.eot");
+  src: url("assets/fonts/SmilePlasticsStencil-Regular/SmilePlasticsStencil-Regular.eot?#iefix")format("embedded-opentype"),
+  url("assets/fonts/SmilePlasticsStencil-Regular/SmilePlasticsStencil-Regular.woff") format("woff"),
+  url("assets/fonts/SmilePlasticsStencil-Regular/SmilePlasticsStencil-Regular.ttf") format("truetype");
 }

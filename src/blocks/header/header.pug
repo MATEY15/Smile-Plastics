@@ -1,4 +1,33 @@
 header.header
-    .container
-        a(href="#").logo
-            +img("src/blocks/header/assets/img/logo.svg", "logo__image", "Logo")
+    .layout
+        .header__wrapper
+            a(href="#").logo
+                +img("src/blocks/header/assets/img/logo.svg", "logo__image", "Logo")
+            .header__right-wrapper
+                ul.header__menu
+                    li.header__menu-list
+                        a(href="#").header__menu-link Mission
+                    li.header__menu-list
+                        a(href="#").header__menu-link Offerings
+                    li.header__menu-list
+                        a(href="#").header__menu-link Lookbook
+                    li.header__menu-list
+                        a(href="#").header__menu-link Order
+                    li.header__menu-list
+                        a(href="#").header__menu-link Blog
+                    li.header__menu-list
+                        a(href="#").header__menu-link Get Started
+                        .header__sub-wrapper
+                            ul.header__sub-menu
+                                li.header__sub-list
+                                    a(href="#").header__menu-link FAQ
+                .header__search
+                    button.header__search-button
+                        +iconSvg("75px", "75px", "icon-search")
+                .header__card
+                    a(href="#").header__card-link
+                        +img("src/blocks/header/assets/img/basket.png", "header__card-image", "Card")
+                button.burger-menu
+                    span.burger-menu__item
+                    span.burger-menu__item
+                    span.burger-menu__item

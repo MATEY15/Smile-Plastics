@@ -2,9 +2,19 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+.layout {
+  max-width: 1568px;
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .container {
   @include laptop-large-screen-min {
-    max-width: 1392px !important;
+    max-width: 1568px;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   &--big {
     @include laptop-large-screen-min {
