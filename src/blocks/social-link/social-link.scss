@@ -5,11 +5,16 @@
 .socials__menu {
   display: flex;
   align-items: center;
-  a {
-    display: flex;
-    align-items: center;
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+
+  a:hover {
+    opacity: .6;
+  }
+
+  li, a {
+    line-height: 0;
+    @include trn(.2s);
+  }
+  li:not(:last-child) {
+    margin-right: 24px;
   }
 }

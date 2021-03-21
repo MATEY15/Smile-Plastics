@@ -1,4 +1,64 @@
 footer.footer
-    .container
-        .footer__content
-            p 123456
+    .layout
+        .row
+            .col-lg-6
+                .footer__logo
+                    +img("src/blocks/footer/assets/img/footer-logo.svg", "footer__logo-image", "Logo Footer")
+            .col-lg-6
+                .row
+                    .footer__content-item.col-lg-4.col-md-4.col-sm-4
+                        h4.footer__head Help
+                        ul.footer__menu
+                            li
+                                a(href="#") Payment
+                            li
+                                a(href="#") Track order
+                            li
+                                a(href="#") Delivery
+                            li
+                                a(href="#") Returns + Refund
+                            li
+                                a(href="#") Covid
+
+                    .footer__content-item.col-lg-4.col-md-4.col-sm-4
+                        h4.footer__head About
+                        ul.footer__menu
+                            li
+                                a(href="#") Our story
+                            li
+                                a(href="#") Careers
+
+                    .footer__content-item.col-lg-4.col-md-4.col-sm-4
+                        ul.footer__menu.footer__menu--big-link
+                            li
+                                a(href="#") Contact us
+                            li
+                                a(href="#") Partner with us
+                            li
+                                a(href="#") Terms and conditions
+
+                .footer__contents
+                    .footer__contents-heading
+                        h4.footer__head Let’s keep in touch
+                        p.footer__desc Sign up for our newsletter and stay up to date on our products, projects and everything around Smile Plastics.
+                    .footer__subscribe
+                        form.footer__subscribe-form
+                            input(placeholder="Email Address…")
+                            button Subscribe
+                    .footer__sicial-wrapper
+                        ul.socials__menu
+                            li
+                                a(href="#")
+                                    +img("src/blocks/social-link/assets/img/facebook.svg", "footer__logo-image", "facebook")
+                            li
+                                a(href="#")
+                                    +img("src/blocks/social-link/assets/img/instagram.svg", "footer__logo-image", "instagram")
+                            li
+                                a(href="#")
+                                    +img("src/blocks/social-link/assets/img/pinterest.svg", "footer__logo-image", "pinterest")
+                            li
+                                a(href="#")
+                                    +img("src/blocks/social-link/assets/img/twitter.svg", "footer__logo-image", "twitter")
+                            li
+                                a(href="#")
+                                    +img("src/blocks/social-link/assets/img/mail.svg", "footer__logo-image", "mail")

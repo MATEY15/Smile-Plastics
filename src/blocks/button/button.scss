@@ -17,9 +17,28 @@ button {
   outline: 0;
   @include trn(.2s);
 
+  &--white {
+    min-height: 60px;
+    padding: 15px 30px 18px;
+    color: #413c2d;
+    border-radius: 3px;
+    background-color: #fff;
+    border: 2px solid #fff;
+    @include fm();
+    font-size: 22px;
+    line-height: 1.27;
+    letter-spacing: -1px;
+
+    &:hover {
+      color: #FFFFFF;
+      background-color: #413c2d;
+      border: 2px solid #FFFFFF;
+    }
+  }
+
   &--gray {
     min-height: 60px;
-    padding: 16px 30px 20px;
+    padding: 15px 30px 18px;
     color: #fff;
     border-radius: 3px;
     background-color: #413c2d;

@@ -9,6 +9,8 @@
     @include fsp();
     font-size: 46px;
     line-height: 1.22;
+    @include font-size(32px, 46px, 570px, 1024px);
+    //@include line-height(34px, 50px, 480px, 1800px);
     color: #413c2d;
     text-align: center;
   }

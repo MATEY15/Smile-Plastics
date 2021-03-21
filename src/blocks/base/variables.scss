@@ -1,6 +1,5 @@
-$gradient: 'linear-gradient(190.09deg, #D18C4E 3.61%, #FAC075 51.88%, #D18C4E 100.99%)';
-
-$fb: 'HelveticaNeueLTPro-Bd', sans-serif;
+//@include font-size(30px, 44px, 480px, 1800px);
+//@include line-height(34px, 50px, 480px, 1800px);
 
 @mixin fr {
   font-family: 'UntitledSans-Regular', sans-serif;

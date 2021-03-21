@@ -1,0 +1,36 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+
+.your-design {
+  background: #413c2d;
+  min-height: 408px;
+  display: flex;
+  align-items: center;
+
+  &__conent {
+    text-align: center;
+    color: #ffffff;
+
+    h3 {
+      @include fm();
+      font-size: 26px;
+      font-weight: 500;
+      line-height: 1.23;
+      letter-spacing: -1.12px;
+      margin-bottom: 4px;
+    }
+
+    p {
+      font-size: 22px;
+      line-height: 1.32;
+      letter-spacing: -1px;
+    }
+  }
+
+  &__button {
+    margin-top: 26px;
+    text-align: center;
+  }
+}
