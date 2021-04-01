@@ -1,0 +1,66 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/slider-banner/assets/img/banner2.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title PRODUCT LOOKBOOK
+                    p.heading__description Our Smile Plastics panels are a springboard for the creativity and imagination of designers and architects across the world.
+                    p.heading__description The versatility of the materials means that our sustainable plastics have been employed in a wide spectrum of product applications, from furniture, frames to chopping boards.
+                    p.heading__description See our top picks here, and get inspired
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDescOffset("product-image28.jpg", "Chest of drawers and plinths by Stamuli for Ganni.")
+                        .col-lg-6
+                            +productDescOffset("product-image29.jpg", "Chest of drawers and plinths by Stamuli for Ganni.")
+                        .col-lg-6
+                            +productDescOffset("product-image30.jpg", "Totem Stool, Ace Hotel by Michael Marriott. Images: Ansgar Sollman")
+                        .col-lg-6
+                            +productDescOffset("product-image31.jpg", "Totem Stool, Ace Hotel by Michael Marriott. Images: Ansgar Sollman")
+                        .col-lg-6
+                            +productDescOffset("product-image32.jpg", "Food display by Smile Plastics")
+                        .col-lg-6
+                            +productDescOffset("product-image33.jpg", "Food display by Smile Plastics")
+                        .col-lg-6
+                            +productDescOffset("product-image34.jpg", "Tables by SPACE10. Images: Nikolaj Thaning Rentzmann ")
+                        .col-lg-6
+                            +productDescOffset("product-image35.jpg", "Tables by SPACE10. Images: Nikolaj Thaning Rentzmann ")
+                        .col-lg-6
+                            +productDescOffset("product-image36.jpg", "Design by Saskia Pomeroy. image by Tian Khee Siong")
+                        .col-lg-6
+                            +productDescOffset("product-image37.jpg", "Design by Saskia Pomeroy. image by Tian Khee Siong")
+                        .col-lg-6
+                            +productDescOffset("product-image38.jpg", "Mih Jean showroom table")
+                        .col-lg-6
+                            +productDescOffset("product-image39.jpg", "Mih Jean showroom furniture")
+                        .col-lg-6
+                            +productDescOffset("product-image40.jpg", "Design and image by Countach Studio")
+                        .col-lg-6
+                            +productDescOffset("product-image41.jpg", "Design and image by Yume, Copenhagen")
+                        .col-lg-6
+                            +productDescOffset("product-image42.jpg", "Notebook Sofa Table by Swedish Ninja.")
+                        .col-lg-6
+                            +productDescOffset("product-image43.jpg", "Notebook Sofa Table by Swedish Ninja.")
+
+        section.section.your-design
+            .layout
+                .your-design__conent
+                    h3 Sign up for free lookbook and brochures
+                .your-design__button
+                    a(href="#").button.button--white Sign up now
+
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

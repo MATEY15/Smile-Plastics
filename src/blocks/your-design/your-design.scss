@@ -8,6 +8,15 @@
   min-height: 408px;
   display: flex;
   align-items: center;
+  padding: 58px 0 64px;
+
+  @include mobile-large-screen {
+    min-height: auto;
+  }
+
+  &--offset {
+    margin-bottom: 32px;
+  }
 
   &__conent {
     text-align: center;
@@ -15,16 +24,16 @@
 
     h3 {
       @include fm();
-      font-size: 26px;
       font-weight: 500;
-      line-height: 1.23;
+      @include font-size(20px, 26px, 570px, 1024px);
+      @include line-height(26px, 32px, 480px, 1800px);
       letter-spacing: -1.12px;
       margin-bottom: 4px;
     }
 
     p {
-      font-size: 22px;
-      line-height: 1.32;
+      @include font-size(18px, 22px, 570px, 1024px);
+      @include line-height(24px, 29px, 480px, 1800px);
       letter-spacing: -1px;
     }
   }

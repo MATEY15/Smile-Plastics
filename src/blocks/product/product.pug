@@ -5,16 +5,83 @@ mixin product(image, name, desc, button)
         .product__content
             h4.product__name= name
             p.product__desc= desc
-            a(href="#").button.button--gray= button
+            if button == false
+            else
+                a(href="#").button.button--gray= button
+
+mixin productMain(image, name, desc, button)
+    .product
+        .product__image-wrapper
+            +img(image, "product__image", "Product")
+        .product__content
+            h4.product__name= name
+            p.product__desc= desc
+            if button == false
+            else
+                a(href="#").button.button--gray= button
+
+mixin productOffset(image, name, desc, button)
+    .product.product--offset
+        .product__image-wrapper
+            +img("src/blocks/product/assets/img/"+image, "product__image", "Product")
+        .product__content
+            h4.product__name= name
+            p.product__desc= desc
+            if button == false
+            else
+                a(href="#").button.button--gray= button
 
 mixin productDesc(image, name)
     .product
         .product__image-wrapper
             +img("src/blocks/product/assets/img/"+image, "product__image", "Product")
         .product__image-desc
-            p
-                i.icon--arrow-top
-                = name
+            //p
+            //    i.icon--arrow-top
+            //    = name
             a(href="#")
-                i.icon--arrow-top
+                +mixinSvg("8px", "10px", "arrow-top", "product__arrow-top")
+                = name
+
+mixin productDescOffset(image, name)
+    .product.product--small-offset
+        .product__image-wrapper
+            +img("src/blocks/product/assets/img/"+image, "product__image", "Product")
+        .product__image-desc
+            //p
+            //    i.icon--arrow-top
+            //    = name
+            a(href="#")
+                +mixinSvg("8px", "10px", "arrow-top", "product__arrow-top")
+                = name
+
+mixin productDescMain(image, name, addClass)
+    div(class= addClass).product
+        .product__image-wrapper
+            +img(image, "product__image", "Product")
+        .product__image-desc
+            //p
+            //    i.icon--arrow-top
+            //    = name
+            a(href="#")
+                +mixinSvg("8px", "10px", "arrow-top", "product__arrow-top")
+                = name
+
+mixin productDescMainFull(image, name, addClass)
+    div(class= addClass).product-full
+        .product-full__image-wrapper
+            +img(image, "product__image", "Product")
+        .product__image-desc
+            .layout
+                a(href="#")
+                    +mixinSvg("8px", "10px", "arrow-top", "product__arrow-top")
+                    = name
+
+mixin productArrow(image, name, addClass)
+    div(class= addClass).product
+        .product__image-wrapper
+            +img(image, "product__image", "Product")
+        .product__image-desc
+            a(href="#").product__link
+                +mixinSvg("22px", "16px", "arrow-right", "")
                 = name

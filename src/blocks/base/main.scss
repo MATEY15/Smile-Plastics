@@ -50,10 +50,14 @@ h1, h2, h3, h4, h5, h6 {
 .main {
   position: relative;
   display: block;
-  padding-top: 120px;
+  padding-top: 112px;
+
+  @include table-large-screen {
+    padding-top: 63px;
+  }
 
   &--default-offset {
-    padding-top: 120px;
+    padding-top: 112px;
   }
 
 }
@@ -75,10 +79,24 @@ p, li, a {
   font-size: 22px;
   line-height: 29px;
   letter-spacing: -1px;
+
+  @include mobile-large-screen {
+    font-size: 18px;
+    line-height: 25px;
+  }
 }
 
+b {
+  @include fm();
+  font-weight: normal;
+}
 
 // Offset
+
+.default-offset {
+  @include margin-bottom(16px, 32px, 540px, 991px);
+}
+
 
 .offset-bottom--100 {
   margin-bottom: 100px;

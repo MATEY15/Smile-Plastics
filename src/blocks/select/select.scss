@@ -1,0 +1,245 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+@import "~select2/dist/css/select2.css";
+// npm i select2 --save
+
+
+// Default style select
+
+.select2-container--default {
+  width: 100% !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.73px;
+  color: #000000;
+
+  &:before {
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border: solid 1px #000000;
+    background: #000;
+    margin-right: 11px;
+    @include brr(50%);
+    @include trn(.2s);
+  }
+}
+
+.select2-results__option--selectable {
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: -0.73px;
+  color: #000000;
+  min-height: 55px;
+  border-bottom: solid 1px #e6e6e6;
+  padding: 15px;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+
+  &:before {
+    position: relative;
+    display: inline-block;
+    content: '';
+    width: 9px;
+    height: 9px;
+    border: solid 1px #000000;
+    margin-right: 11px;
+    @include brr(50%);
+    @include trn(.2s);
+  }
+
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  background: #fff;
+  &:before {
+    background: #000;
+  }
+}
+
+.select2-container--default .select2-results__option--selected {
+  background-color: transparent;
+}
+
+.select2-container--default .select2-results__option--highlighted.select2-results__option--selectable {
+  color: #000;
+}
+
+.order-cake__input-style {
+  .select2-container--default {
+    width: 100% !important;
+  }
+}
+
+.select2-container,
+.sort-select {
+  outline: none;
+}
+
+.sort-select + .select2-container * {
+  outline: none !important;
+}
+
+.select2-container--default .select2-selection--single {
+  min-height: 55px;
+  width: 100%;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  border-left: 0;
+  border-right: 0;
+  padding: 14px 0;
+  border-radius: 0;
+}
+
+.select2-dropdown {
+  border: 1px solid #e6e6e6;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+  width: 40px;
+  height: 100%;
+
+  &:before {
+    position: absolute;
+    top: 50%;
+    right: 18px;
+    content: '';
+    margin-top: -6px;
+    width: 6px;
+    height: 6px;
+    border-color: #000;
+    border-style: solid;
+    border-width: 0 1px 1px 0;
+    transform-origin: center;
+    transform: rotate(45deg);
+  }
+
+  b {
+    display: none;
+  }
+}
+
+.drop-select--wrap .select2-results__option {
+  font-size: 14px;
+  color: #6d7382;
+  padding: 5px 15px;
+}
+
+.select-option__main {
+  max-width: 560px;
+}
+
+.select-option {
+  max-width: 1050px;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__title {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: normal;
+    color: #153257;
+    margin-bottom: 20px;
+
+  }
+
+  &__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #F7F8FF;
+    border-radius: 10px;
+    padding: 30px 40px 50px;
+    min-height: 320px;
+    max-width: 320px;
+    margin: 0 auto;
+
+    @include table-large-screen {
+      margin-bottom: 30px;
+    }
+
+    &:before {
+      position: absolute;
+      content: '';
+      max-width: 240px;
+      width: 100%;
+      height: 50px;
+      bottom: 0;
+      left: 50%;
+      @include tt(-50%, 0);
+      background: #4637A5;
+      filter: blur(20px);
+      display: none;
+      z-index: -1;
+    }
+
+    &--active {
+      background: #FFFFFF;
+      box-shadow: 0px 20px 30px rgba(0, 0, 0, 0.05);
+      border-radius: 25px;
+      &:before {
+        display: block;
+      }
+    }
+  }
+
+  &__item-name {
+    @include fr();
+    font-size: 20px;
+    line-height: 26px;
+    padding-bottom: 20px;
+    color: #153257;
+    text-align: center;
+    border-bottom: 2px solid #E7EBF9;
+  }
+
+  &__item-content {
+
+  }
+
+  &__item-price {
+    display: flex;
+    justify-content: center;
+    span {
+      position: relative;
+      display: inline-block;
+      top: 12px;
+      font-size: 30px;
+      line-height: 36px;
+      color: rgba(117, 99, 188, 0.5);
+      margin-right: 10px;
+    }
+    p {
+      font-size: 60px;
+      line-height: 72px;
+      text-align: center;
+      color: #4637A5;
+    }
+  }
+  &__item-button {
+    text-align: center;
+    margin-top: 30px;
+  }
+}
+
+
+.card-icons {
+  display: flex;
+  align-items: baseline;
+
+  &__item {
+    margin-right: 10px;
+  }
+}

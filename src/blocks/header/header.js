@@ -1,4 +1,4 @@
-headerScroll();
+// headerScroll();
 
 function headerScroll() {
     let $topHeader = $('.header');
@@ -37,3 +37,17 @@ window.catalogMenu = new menu(
         menuActiveClass: 'active',
     }
 );
+
+
+function subMenu() {
+    let headerMenuList = $('.header__menu li');
+    headerMenuList.each(function(index, item) {
+        $(item).hover(()=> {
+            if($(item).find('.header__sub-wrapper')) {
+                console.log($(item).find('.header__sub-menu').outerHeight())
+                $(item).find('.header__sub-wrapper').slideToggle()
+            }
+        })
+    });
+}
+subMenu();

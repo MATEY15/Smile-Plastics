@@ -1,0 +1,43 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.product-preview {
+  padding-top: 36px;
+
+  &__image {
+    a {
+      position: relative;
+      display: inline-flex;
+    }
+    img {
+      max-width: 100%;
+    }
+  }
+
+  &__name {
+    @include margin-bottom(22px, 29px, 540px, 991px);
+  }
+  &__name,
+  &__items label {
+    display: block;
+    @include fm();
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+  }
+  &__items label {
+    margin-bottom: 10px;
+  }
+  &__items {
+    &:not(:last-child) {
+      @include margin-bottom(24px, 32px, 540px, 991px);
+    }
+  }
+
+  &__button {
+    @include margin-top(32px, 48px, 540px, 991px);
+  }
+
+}

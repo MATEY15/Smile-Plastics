@@ -2,15 +2,26 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+.heading-inside {
+  @include font-size(18px, 26px, 570px, 1024px);
+  @include line-height(24px, 32px, 480px, 1024px);
+  @include fm();
+  text-transform: uppercase;
+  color: #000;
+}
+
 .heading {
   margin-bottom: 120px;
 
+  @include mobile-large-screen {
+    margin-bottom: 60px;
+  }
+
   &__title {
     @include fsp();
-    font-size: 46px;
-    line-height: 1.22;
-    @include font-size(32px, 46px, 570px, 1024px);
-    //@include line-height(34px, 50px, 480px, 1800px);
+    //line-height: 1.22;
+    @include font-size(26px, 46px, 570px, 1024px);
+    @include line-height(34px, 56px, 480px, 1800px);
     color: #413c2d;
     text-align: center;
   }
@@ -18,10 +29,32 @@
   &__description {
     font-size: 22px;
     line-height: 1.32;
+    @include font-size(18px, 22px, 540px, 1024px);
+    @include line-height(24px, 29px, 540px, 1024px);
     letter-spacing: -1px;
     color: #000000;
     text-align: center;
-    max-width: 820px;
+    max-width: 800px;
     margin: 15px auto 0;
+    @include mobile-large-screen {
+      margin: 10px auto 0;
+    }
+
+    @media (max-width: 854px) {
+      br {
+        display: none;
+      }
+    }
   }
+
+  &__button-wrapper {
+    text-align: center;
+    padding-top: 26px;
+  }
+
+  &__content {
+    @include padding-top(32px, 78px, 540px, 1024px);
+  }
+
 }
+

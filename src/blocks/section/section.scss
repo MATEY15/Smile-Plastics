@@ -5,8 +5,18 @@
 .section {
   overflow: hidden;
 
+  &__order {
+    padding: 32px 0;
+  }
+
   &--offset-none {
     padding: 0;
+  }
+
+  &--offset-alba {
+    @include padding-top(40px, 120px, 540px, 991px);
+    padding-bottom: 40px;
+    border-bottom: 1px solid #e6e6e6;
   }
 
   &--small-offset {
@@ -15,6 +25,21 @@
 
   &--offset-top {
     padding-top: 110px;
+
+    @include mobile-large-screen {
+      padding-top: 55px;
+    }
   }
 
+  &--offset-equally {
+    @include padding-top(0px, 120px, 540px, 991px);
+    @include padding-bottom(60px, 120px, 540px, 991px);
+  }
+
+}
+
+.section-gray {
+  min-height: 320px;
+  padding: 24px 0;
+  background-color: #413c2d;
 }

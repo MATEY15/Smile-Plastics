@@ -1,0 +1,39 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .layout
+                .desc-content
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Delivery
+                        .col-lg-6.col-md-6
+                            .content-text.default-offset
+                                b Panels
+                                p For sheet orders it is usually 2-8 weeks from order to shipping, depending on stock levels. If we are cutting pieces, then it usually adds at least a week (more for cnc jobs than wall saw).
+
+                                p 2000mmx1000mm pallet shipping in the UK is next day
+
+                                p 3000mmx1200mm is a 2-3 day service.
+
+                                p TNT in the UK it is next day, and elsewhere it is usually under a week.
+
+                                b International pallets
+                                p It can be anywhere from a week to a couple of months depending on the shipping method and location (Ireland road freight is around a week, sea freight to China is months).
+
+                                b Samples
+                                p It is anywhere from next day to several weeks depending on the day they order and where it is going to.
+
+                                b *This is all excluding customs which are adding up to a week or two depending on the country and how fast the customer is at responding to import agents.
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

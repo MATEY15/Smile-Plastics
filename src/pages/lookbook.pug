@@ -1,0 +1,81 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/slider-banner/assets/img/banner.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title LOOKBOOK
+                    p.heading__description Our Smile Plastics panels are a springboard for the creativity and imagination of designers and architects across the world.
+                    p.heading__description The versatility of the materials means that our plastics have been employed in a wide spectrum of applications, from art installations through to furniture and jewellery.
+                    p.heading__description Scroll through our pages for inspiration and our top picks.
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Retail")
+                        +listBreadcrumbs("Lookbook", true)
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDesc("product-image21.jpg", "Holt Renfrew Ogilvy by Jeffrey Hutchinson Associates. Image via Google.")
+                        .col-lg-6
+                            +productDesc("product-image22.jpg", "Ace at Bluebird.")
+
+        section.section
+            .layout
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Hospitality")
+                        +listBreadcrumbs("Lookbook", true)
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDesc("product-image23.jpg", "Glasses by Cubitts. Image by Cubitts")
+                        .col-lg-6
+                            +productDesc("product-image5.jpg", "‘The Transformer’ by Old Scuola. Photos: Jurgen Jacob")
+
+        section.section
+            .layout
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("interior")
+                        +listBreadcrumbs("Lookbook", true)
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDesc("product-image24.jpg", "Granville Park by 2LG Studio. Image by Megan Taylor.")
+                        .col-lg-6
+                            +productDesc("product-image25.jpg", "Kitchen byFlorian Bérenguer architects. Image by Bazarpoint Studio")
+
+        section.section
+            .layout
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("product")
+                        +listBreadcrumbs("Lookbook", true)
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDesc("product-image26.jpg", "Modulr Space by FDA architecture")
+                        .col-lg-6
+                            +productDesc("product-image27.jpg", "Custom table by SmIle Plastics")
+
+        section.section.your-design
+            .layout
+                .your-design__conent
+                    h3 Sign up for free lookbook and brochures
+                .your-design__button
+                    a(href="#").button.button--white Sign up now
+
+        include ../blocks/testimonials/testimonials

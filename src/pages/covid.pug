@@ -1,0 +1,27 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .layout
+                .desc-content
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Stay Safe + Keep Positive
+                        .col-lg-6.col-md-6
+                            .content-text.default-offset
+                                p We hope that you, your families, and your friends are safe and well at this challenging time.
+                                p Following the UK government guidance and based on the latest advice, our priority remains to keep staff safe, and protect jobs.
+                                p We aim to make your shopping experience as stress-free as possible, and we're sorry for any inconvenience you may incur due to our increased safety measures and hope that you can bear with us during this difficult period.
+                                p We can't thank both staff, customers, and our communities enough for their dedication and loyalty. If you need us, we're still working to offer our customers a brighter future at smile-plastics.com.
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

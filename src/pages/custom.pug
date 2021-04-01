@@ -1,0 +1,160 @@
+extends ../templates/main
+
+include ../blocks/product/product
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .slider-banner__wrapper
+                .slider-banner
+                    .slider-banner__item
+                        +img("src/blocks/slider-banner/assets/img/custom-product-full1.jpg", "slider-banner__image", "Image Banner")
+                    .slider-banner__item
+                        video(src="src/blocks/slider-banner/assets/video/video.mp4" autoplay loop playsinline muted).slider-banner__video
+
+                .slider-banner__navigate
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title CUSTOM MATERIALS
+                .material-content.material-content--offset-bottom
+                    .row
+                        .col-lg-6
+                            .material-content__image
+                                +img("src/blocks/custom/assets/img/material-content1.jpg", "", "Image Product")
+                        .col-lg-6
+                            .material-content__text
+                                p Custom materials development is what we get most excited about  at Smile Plastics, and its direction can focus on one or several themes:
+                                ul
+                                    li 1.    Aesthetically-driven
+                                    li 2.    Material source-driven
+                                    li 3.    Application-driven
+                                    li 4.    Format-driven.
+
+                                p
+                                p
+                                p For us to advise on possibilities, costs and timelines, it’s so important that you provide as much information as possible at the start, including order volume requirements, your intended application, repeatability/consistency#[br] requirements, and any moodboards/visual direction. The initial review and scoping of your project are always free of charge.
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Examples of easy adaptations #[br] to our Classic materials include:
+
+                .row
+                    .col-lg-6
+                        +productDescMain("src/blocks/product/assets/img/product-image19.jpg", "Colour-matched washes of Alba", "product--small-offset")
+                    .col-lg-6
+                        +productDescMain("src/blocks/product/assets/img/product-image20.jpg", "Colour-matched washes of a Grey Mist-style material", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full2.jpg", "Changing fleck ratios of black to white on our Explorer ", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full3.jpg", "Ratios of multicoloured flecks in our Alba material", "product--small-offset")
+                +productDescMainFull("src/blocks/product/assets/img/product-image-full.jpg", "Ratios of multicoloured flecks in our ocean material", "product--small-offset")
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full4.jpg", "Introduction of specific-coloured flecks on our Alba background", "product--small-offset")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Examples of more complex #[br] pattern generation
+
+                .row
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product1.jpg", "Playing with fleck sizes and shapes, e.g., to create a terrazzo-effect material", "product--small-offset")
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product2.jpg", "Playing with fleck sizes and shapes, e.g., to create a terrazzo-effect material", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full5.jpg", "Changing fleck ratios of black to white on our Explorer ", "product--small-offset")
+
+            .layout
+                .row
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product3.jpg", "Ombre or gradient effect material either within or between sheets", "product--small-offset")
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product4.jpg", "Ombre or gradient effect material either within or between sheets", "product--small-offset")
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product5.jpg", "Large scale placement patterns across the sheet", "product--small-offset")
+                    .col-lg-6
+                        +productDescMain("src/blocks/custom/assets/img/custom-product6.jpg", "Large scale placement patterns across the sheet", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full6.jpg", "Changing fleck ratios of black to white on our Explorer ", "product--small-offset")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Material source-driven #[br] Materials Development
+                    .heading__content.row
+                        .col-lg-6
+                            p We can work with various thermoplastics, papers, organic materials, and memorabilia to create encapsulated or fully integrated materials.  We’re happy to review any input materials you’d like us to use for a one-off sheet right the way through to a large scale roll out of panels from your waste.
+                        .col-lg-6
+                            p Originating materials we have worked with include CDs, banknotes, wellies, electric cabling, Christmas decorations, toys, papers, plastic straws, wood shavings, coffee grounds, foliage, and marine litter.  Note we can’t work with heavily contaminated waste or metals.
+
+                .product-full
+                    .row
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product7.jpg", "Christmas Tinsel, Selfridges", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product8.jpg", "Christmas Tinsel, Selfridges", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full7.jpg", "Straws, electric cables and xxxxxx", "product--small-offset")
+                +productDescMainFull("src/blocks/product/assets/img/product-image-full.jpg", "Marine litter table", "product--small-offset")
+                +productDescMainFull("src/blocks/custom/assets/img/custom-product-full8.jpg", "Valchromat material composite", "product--small-offset")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Application-driven Materials #[br] Development
+                    p.heading__description We can look at developing materials that have mechanical or technical performance requirements better suited to your project than our standard materials which could include meeting material flex, UV and weather or fire performance criteria.
+                .product-full
+                    .row
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product7.jpg", "Christmas Tinsel, Selfridges", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product8.jpg", "Christmas Tinsel, Selfridges", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product9.jpg", "Selfridges Camo material for shoe display", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product10.jpg", "Selfridges Camo material for shoe display", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product11.jpg", "Studio INI installation", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/custom-product12.jpg", "Studio INI installation", "product--small-offset")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Format-driven Materials #[br] Development
+                .product-full
+                    .row
+                        .col-lg-6
+                            +productDescMain("src/blocks/custom/assets/img/material-content2.jpg", "Christmas Tinsel, Selfridges", "product--small-offset")
+                        .col-lg-6
+                            .content-text
+                                p #[b Thickness Requirements.] Our standard thicknesses are 5, 12, and 20mm, but we can also supply 3,6, 8, 10, 15, 17, 23, 24, 25, and 32mm sheets subject to a sheet premium. #[a(href="#") Contact us] for details.
+                                p We offer a cutting and fabrication (link to page) service to achieve semi-finished parts and finished products. However, there may be times when achieving moulded-objects is better aligned with your needs commercially or practically.
+
+        section.section.your-design.your-design--offset
+            .layout
+                .your-design__conent
+                    h3 Get Started Today
+                    p Find out how we can help you develop your ideas.
+                .your-design__button
+                    a(href="#").button.button--white Order samples
+
+        section.section
+            .layout
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Cutting", "We offer a cutting service on all our materials, from the production of semi-finished and finished parts to full product design and development. If you need help, give us a shout.", "Classic range")
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Fabrication", "We offer a range of finishes on all our material. You can choose from a large selection of edge finishes and details. If you have a particular finish you are looking for, do let us know.", "How it works")
+
+        include ../blocks/catalog/catalog
+        include ../blocks/testimonials/testimonials

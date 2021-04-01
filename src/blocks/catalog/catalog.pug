@@ -1,0 +1,29 @@
+mixin catalogItem(image, name)
+    .catalog__item
+        .catalog__image-wrapper
+            +img(image, "catalog__image", "Product")
+        .catalog__name
+            p= name
+
+
+section.section.catalog
+    .layout
+        .catalog__head
+            h3 View more of the Classics
+        .row
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image12.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image13.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image14.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image15.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image16.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image17.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image18.jpg", "Charcoal")
+            .col-lg-3.col-md-4.col-sm-6
+                +catalogItem("src/blocks/product/assets/img/product-image11.jpg", "Charcoal")

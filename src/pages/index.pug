@@ -15,87 +15,34 @@ block content
         section.section.section--offset-top
             .layout
                 .heading
-                    h3.heading__title Reimagined Materials. Designed to Inspire.
-                    p.heading__description Smile Plastics materials design and manufacturing house creates supersized decorative panels for retail, architecture, interiors and product design. 100% recycled. 100% recyclable.
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +product("product-image1.jpg", "Classic Materials", "The materials in our classics range are all lovingly hand-crafted, with every quirk, imperfection and mottle telling a different recycling story. Each sustainable material has been tried and tested in a wide range of applications", "Classic range")
-                        .col-lg-6
-                            +product("product-image2.jpg", "Blend it Yourself", "The materials in our classics range are all lovingly hand-crafted, with every quirk, imperfection and mottle telling a different recycling story. Each sustainable material has been tried and tested in a wide range of applications", "How it works")
+                    h3.heading__title Pages
+                ul
+                    li
+                        a(href="home.html") Home
+                    li
+                        a(href="classic-main.html") Classic Main
+                    li
+                        a(href="alba.html") Alba
+                    li
+                        a(href="lookbook.html") Lookbook
+                    li
+                        a(href="product-lookbook.html") Product Lookbook
+                    li
+                        a(href="custom.html") Custom
+                    li
+                        a(href="mission.html") Mission
+                    li
+                        a(href="order.html") Order
+                    +item("About", "about.html")
+                    +item("FAQ", "faq.html")
+                    +item("Limited Edition", "limited-edition.html")
+                    +item("Careers", "careers.html")
+                    +item("Become a partner", "become-partner.html")
+                    +item("Covid", "covid.html")
+                    +item("Samples", "samples.html")
+                    +item("Sample Page", "sample-page.html")
 
-        section.section.section--offset-top
-            .layout
-                .heading
-                    h3.heading__title SMILE PLASTICS
-                    p.heading__description We’re on a mission at Smile Plastics, and we have two main goals. Firstly, we want to create the most beautiful circular plastics in the world – 100% recycled, but also 100% recyclable materials. Secondly, we want to challenge ideas about “waste” and the system that creates it.
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +product("product-image1.jpg", "Cutting", "The materials in our classics range are all lovingly hand-crafted, with every quirk, imperfection and mottle telling a different recycling story. Each sustainable material has been tried and tested in a wide range of applications", "Learn More")
-                        .col-lg-6
-                            +product("product-image1.jpg", "Fabrication", "Blend a custom sustainable material with us. We are trusted by a diverse set of clients – from iconic brands to freelance designers and artists – to create personalised recycled panels from a range of different waste streams", "Learn More")
-
-        section.section.section--offset-top
-            .layout
-                .heading
-                    h3.heading__title Wonder in waste
-                    p.heading__description All our panels are made using 100% recycled materials. These are arranged by hand before pressing, making each panel a unique piece.
-                .breadcrumbs
-                    ul.breadcrumbs__lists
-                        +listBreadcrumbs("Retail")
-                        +listBreadcrumbs("Lookbook", true)
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +productDesc("product-image3.jpg", "Alba used for a chair by Alexander Schul")
-                        .col-lg-6
-                            +productDesc("product-image4.jpg", "Alba used for a chair by Alexander Schul")
-
-        section.section
-            .layout
-                .breadcrumbs
-                    ul.breadcrumbs__lists
-                        +listBreadcrumbs("Hospitality")
-                        +listBreadcrumbs("Lookbook", true)
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +productDesc("product-image5.jpg", "Alba used for a chair by Alexander Schul")
-                        .col-lg-6
-                            +productDesc("product-image6.jpg", "Alba used for a chair by Alexander Schul")
-
-        section.section
-            .layout
-                .breadcrumbs
-                    ul.breadcrumbs__lists
-                        +listBreadcrumbs("Interior")
-                        +listBreadcrumbs("Lookbook", true)
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +productDesc("product-image7.jpg", "Alba used for a chair by Alexander Schul")
-                        .col-lg-6
-                            +productDesc("product-image8.jpg", "Alba used for a chair by Alexander Schul")
-
-        section.section
-            .layout
-                .breadcrumbs
-                    ul.breadcrumbs__lists
-                        +listBreadcrumbs("Product")
-                        +listBreadcrumbs("Lookbook", true)
-                .product__wrapper
-                    .row
-                        .col-lg-6
-                            +productDesc("product-image9.jpg", "Alba used for a chair by Alexander Schul")
-                        .col-lg-6
-                            +productDesc("product-image10.jpg", "Alba used for a chair by Alexander Schul")
-
-        section.section.section--offset-top
-            .layout
-                .heading
-                    h3.heading__title The material
-                    p.heading__description Our material is made from various recycled plastics or other wastestreams of an exceptional quality. We work with (amongst other things) plastic bottles, yoghurt pots and packaging, plant pots, food packaging and coffee grounds. All our materials are highly versatile, easy to work with and waterproof.
+                    +item("Delivery", "delivery.html")
 
         include ../blocks/your-design/your-design
         include ../blocks/preview/preview

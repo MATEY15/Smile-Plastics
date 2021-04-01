@@ -43,6 +43,8 @@
     "@babel/polyfill": "^7.8.7",
     "chart.js": "^2.9.4",
     "jquery": "^2.1.1",
+    "magnific-popup": "^1.1.0",
+    "select2": "^4.1.0-rc.0",
     "slick-carousel": "^1.8.1",
     "svg4everybody": "^2.1.9",
     "swiper": "^6.4.8"

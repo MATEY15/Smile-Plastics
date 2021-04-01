@@ -1,0 +1,45 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.catalog {
+  //border-top: solid 1px #e6e6e6;
+
+  &__head {
+    @include fm();
+    letter-spacing: 0.02px;
+    color: #000000;
+    @include font-size(20px, 26px, 540px, 1024px);
+    @include line-height(26px, 32px, 540px, 1024px);
+    text-transform: uppercase;
+    @include margin-bottom(30px, 85px, 540px, 1024px);
+    padding-top: 8px;
+  }
+
+  &__item {
+    max-width: 360px;
+    margin: 0 auto 28px;
+  }
+  &__image-wrapper {
+    position: relative;
+    max-width: 360px;
+    font-size: 0;
+
+    &:before {
+      content: "";
+      padding-top: 100%;
+      display: block;
+    }
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  &__name {
+
+  }
+}

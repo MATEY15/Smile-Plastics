@@ -1,0 +1,48 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/slider-banner/assets/img/banner.jpg", "banner-header__image", "Banner")
+
+        section.section.section__order
+            .layout
+                .product-order__wrapper
+                    .row
+                        .col-lg-6
+                            +productArrow("src/blocks/order/assets/img/order-product1.jpg", "Panels", "product-order")
+                        .col-lg-6
+                            +productArrow("src/blocks/order/assets/img/order-product2.jpg", "Samples", "product-order")
+                        .col-lg-6
+                            +productArrow("src/blocks/order/assets/img/order-product3.jpg", "Tables", "product-order")
+                        .col-lg-6
+                            +productArrow("src/blocks/order/assets/img/order-product4.jpg", "Food Display", "product-order")
+            .product__full
+                +img("src/blocks/order/assets/img/order-product-full1.jpg", "product__full-image", "Product Post")
+                .layout.product__full-layout
+                    a(href="#").product__full-link
+                        +mixinSvg("22px", "16px", "arrow-right", "")
+                        | Custom Materials
+
+
+
+        section.section
+            .layout
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Cutting", "We offer a cutting service on all our materials, from the production of semi-finished and finished parts to full product design and development. If you need help, give us a shout.", "Classic range")
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Fabrication", "We offer a range of finishes on all our material. You can choose from a large selection of edge finishes and details. If you have a particular finish you are looking for, do let us know.", "How it works")
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

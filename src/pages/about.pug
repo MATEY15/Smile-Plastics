@@ -1,0 +1,101 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/product/assets/img/product-image-full.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Putting a Smile on your waste
+                    p.heading__description We design sustainable materials made from “waste” plastics collected from households and businesses. We believe that our reimagined, recycled materials match any new ones that you’ll find in terms of quality and style. Plus, each one is put together by hand and differs from any other panel.
+
+                .section-description
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Our Story
+                        .col-lg-6.col-md-6
+                            .content-text.default-offset
+                                b A company with a circular history
+                                p Smile Plastics enjoys a long history dating back to the early 90s.#[br] After two decades of recycling plastics, the first Smile Plastics closed as the founder retired – leaving designers and architects struggling to find sustainable materials that have both great quality and great design. #[br] But in every end, there is a new beginning. So, having spent a decade developing circular design solutions for waste, award-winning design partners Adam Fairweather and Rosalie McMillan re-established Smile Plastics in 2014, focusing on new technology and industrial ecosystems, evolving its design, and growing the product range.
+                                p Today, Smile Plastics continues to be a global leader in making top-quality materials from waste for design cognoscenti.
+
+                .section-description
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Why we do it
+                        .col-lg-6.col-md-6
+                            .content-text.default-offset
+                                b Recycling should upvalue, not downvalue.
+                                p Our mission is to create next-gen circular economy materials and encourage us to value our resources and waste less. To do this, we reimagine end-of-life materials into products that tell a story that resonates with people. We pride ourselves in making some of the highest quality and striking decorative panel materials around – 100% recycled, but also 100% recyclable (so they can be reused over and over again).
+                                b Inspired by “waste” plastic
+                                p Inspiration usually comes from the materials themselves. We start by exploring discarded plastics to understand their intrinsic value and their potential to be used again. First, we test for quality, colours, textures, patterns, etc., in combination with other waste materials. Next, we go about turning them into the finished product, which is the reimagining that’s at the heart of the Smile Plastics design process. It’s not just about the aesthetic: testing is key to delivering peak quality so people can cherish our materials for a long time.
+                                b Materials that connect the dots and tell a story
+                                p We include distinct traces of the plastics’ origins in their new life to create a narrative around the materials. This takes shape as flecks of foil from the original yoghurt pot lids or text and barcodes from plastic packaging. The details draw you in, surprise, and let you know quietly how those materials came to be.
+
+                .section-description
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Who we are
+                        .col-lg-6.col-md-6
+                            .content-text.default-offset
+                                p We’re a small micro-factory based in the UK trusted by well-known brands, architects, and designers worldwide to deliver the materials for their projects.
+                                p Looking for existing styles? See our Classics range. Thinking about a limited edition or a custom material design and build service? Good news, we’d love to hear about your idea. Please get in touch with us.
+                                p Finally, you can get a good impression of the products from photos, but it’s best to see and touch them in person. Please do request a sample.
+
+                .section-description
+                    .row
+                        .col-lg-6.col-md-6
+                            h3.heading-inside Our Story
+                        .col-lg-6.col-md-6
+                            .row
+                                .col-lg-6.col-md-6
+                                    ul.content-list
+                                        +lists("Ganni", "", "")
+                                        +lists("Cos", "", "")
+                                        +lists("Monki", "", "")
+                                        +lists("H&M", "", "")
+                                        +lists("L’Oreal", "", "")
+                                        +lists("Urban Outfitters", "", "")
+                                        +lists("Stella McCartney", "", "")
+                                        +lists("Christian Dior", "", "")
+                                        +lists("Selfridges", "", "")
+                                        +lists("Liberty", "", "")
+                                        +lists("Wellcome Trust", "", "")
+                                        +lists("Paul Smith", "", "")
+                                        +lists("Droog", "", "")
+                                        +lists("LUSH", "", "")
+                                        +lists("Heals", "", "")
+                                        +lists("Acne Studios", "", "")
+                                        +lists("Ace Hotel", "", "")
+
+                                .col-lg-6.col-md-6
+                                    ul.content-list
+                                        +lists("Open desk", "", "")
+                                        +lists("Anthropologie", "", "")
+                                        +lists("Lofbergs", "", "")
+                                        +lists("Ashortwalk", "", "")
+                                        +lists("Surfdome", "", "")
+                                        +lists("Greencup", "", "")
+                                        +lists("Ford", "", "")
+                                        +lists("Urban Outfitters", "", "")
+                                        +lists("Sanremo", "", "")
+                                        +lists("KPMG", "", "")
+                                        +lists("National Trust", "", "")
+                                        +lists("YardSale Pizza", "", "")
+                                        +lists("Hej", "", "")
+                                        +lists("Havas", "", "")
+                                        +lists("Space10", "", "")
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

@@ -23,33 +23,47 @@ button {
     color: #413c2d;
     border-radius: 3px;
     background-color: #fff;
-    border: 2px solid #fff;
+    border: 1px solid #fff;
     @include fm();
     font-size: 22px;
     line-height: 1.27;
     letter-spacing: -1px;
 
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 11px 20px 13px;
+      min-height: 48px;
+    }
+
     &:hover {
       color: #FFFFFF;
       background-color: #413c2d;
-      border: 2px solid #FFFFFF;
+      border: 1px solid #FFFFFF;
     }
   }
 
   &--gray {
     min-height: 60px;
     padding: 15px 30px 18px;
-    color: #fff;
+    color: #fff !important;
     border-radius: 3px;
     background-color: #413c2d;
-    border: 2px solid #413c2d;
+    border: 1px solid #413c2d;
     @include fm();
     font-size: 22px;
     line-height: 1.27;
     letter-spacing: -1px;
 
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 24px;
+      padding: 11px 20px 13px;
+      min-height: 48px;
+    }
+
     &:hover {
-      color: #413c2d;
+      color: #413c2d !important;
       background-color: transparent;
     }
   }

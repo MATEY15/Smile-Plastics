@@ -2,6 +2,20 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+
+.desc-content {
+  min-height: 750px;
+  @include table-large-screen {
+    min-height: auto;
+  }
+}
+
+.content-list {
+  a {
+    color: #000;
+  }
+}
+
 .text-content {
   max-width: 840px;
   padding: 87px 15px 60px;
@@ -22,5 +36,66 @@
     font-size: 15px;
     line-height: 24px;
     letter-spacing: -.03em;
+  }
+}
+
+.text-default {
+  p {
+    margin-bottom: 24px;
+  }
+  b {
+    @include fm();
+    font-weight: normal;
+  }
+}
+
+
+.content-text {
+  b {
+    display: block;
+    @include fm();
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  br {
+    @include table-large-screen {
+      display: none;
+    }
+  }
+  p {
+    margin-bottom: 24px;
+    @include mobile-large-screen {
+      margin-bottom: 14px;
+    }
+    b {
+      display: inline-block;
+    }
+  }
+  a {
+    position: relative;
+    color: #000;
+    &:hover {
+      &:before {
+        opacity: 0;
+        visibility: hidden;
+      }
+    }
+    &:before {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      content: '';
+      width: 100%;
+      height: 1px;
+      background: #000;
+      @include trn(.2s);
+    }
   }
 }

@@ -2,9 +2,20 @@ mixin item(title, url)
     li
         a(href=url, class=active == title ? 'active' : '')= title
 
+mixin lists(title, url, className)
+    li
+        if url == ""
+            a(href="#", class=className)= title
+        else
+            a(href=url, class=className)= title
+
 mixin iconSvg(w, h, id)
     svg(width=w height=h class=id)
         use(xlink:href="/images/icons/sprites.svg#"+id)
+
+mixin mixinSvg(w, h, idIcon, className)
+    svg(width=w height=h class=className)
+        use(xlink:href="/images/icons/sprites.svg#"+idIcon)
 
 mixin iconSvgSocial(w, h, wp, id)
     svg(width=w height=h viewBox=wp class=id)

@@ -1,0 +1,240 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/product/assets/img/product-image-full.jpg", "banner-header__image", "Banner")
+
+        section.section.example__section
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .example.default-offset
+                            .example__image-wrapper
+                                +img("src/blocks/alba/assets/img/alba-product1.jpg", "example__image", "Alba sample")
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            p #[b Alba] #[br] Made from waste yoghurt pots
+                            p Alba is our best-selling material and you can see why#[br] – it’s sophisticated enough that it wouldn’t look out of place in Selfridges or #[br] Modern House, yet it’s also made from a humble kitchen cast-off: used yoghurt pots.
+                            p With its white, marble-like surface and hints of gold and silver (from yoghurt pot foil), Alba isn’t just easy on the eye. It’s easy to use too.
+                            p Available in 5mm, 12mm and 20mm thickness.
+                            a(href="#").button.button--gray Shop samples
+                    .col-lg-6
+                        .row
+                            .col-lg-6.col-md-6
+                                +productDescMain("src/blocks/alba/assets/img/alba-product2.jpg", "12mm", "product--dark")
+                            .col-lg-6.col-md-6
+                                +productDescMain("src/blocks/alba/assets/img/alba-product3.jpg", "20mm", "product--dark")
+                    .col-lg-6
+                    .col-lg-4.col-md-6
+                        .product
+                            .product__image-big-wrapper
+                                +img("src/blocks/alba/assets/img/alba-product4.jpg", "product__image-big", "Product")
+                            .product__content-size
+                                a(href="#").button.button--gray Shop supersize panel
+                                p.product__text-size 3000mm × 1200mm
+                    .col-lg-4.col-md-6
+                        .product
+                            .product__image-big-wrapper
+                                +img("src/blocks/alba/assets/img/alba-product4.jpg", "product__image-big", "Product")
+                            .product__content-size
+                                a(href="#").button.button--gray Shop mid panel
+                                p.product__text-size 2000mm × 1000mm
+                    .col-lg-4.col-md-6
+                        .product
+                            .product__image-big-wrapper
+                                +img("src/blocks/alba/assets/img/alba-product4.jpg", "product__image-big", "Product")
+                            .product__content-size
+                                a(href="#").button.button--gray Shop large panel
+                                p.product__text-size 1200mm × 1000mm
+
+        section.section.section--offset-equally
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            b Panel Information
+                            p Every panel is unique, and colour and pattern may vary from sheet to sheet and from batch to batch. If you strictly need to minimise colour variation, discuss your needs with us prior to order to make sure all your material comes from the same batch.
+                            p We try very hard to make our sheets as blemish-free as we can, but they are not perfect; for example, they may have dimples and minor marks which are outside our control. Please contact us to discuss this if it could be a problem.
+                            p The listed board thicknesses are nominal: thermal expansion of some sheets can be 2mm per metre over a 10 degree (Celcius) range.
+                            p High Impact Polystyrene is a flammable material and should be placed at a sufficient distance from any naked flame.
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            b Dimensions
+                            p 300cm×120cm, 200×100cm though often the panel will arrive slightly larger with unfinished edges (approx. 209×109cm).
+                            b Thicknesses
+                            p 5mm, 12mm, 20mm
+                            b Prices and lead times
+                            p Please email us at info@smile-plastics.com to enquire about prices and lead times, mentioning the quantity, and thickness of panels you require and any deadlines. Most of our panels are made to order and we hold very limited stock. Expect 2-8 week lead times for most orders. Smile Plastics’ terms and conditions apply to all sales.
+                            b Shipping
+                            p We are able to ship internationally within and outside of Europe as individual packages or on double pallets. Please email info@smile-plastics.com for a quote.
+
+        section.section
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .row
+                            .col-lg-6.col-md-6
+                                .example.default-offset
+                                    .example__image-wrapper
+                                        +img("src/blocks/alba/assets/img/alba-product5.jpg", "example__image", "Alba sample")
+                            .col-lg-6.col-md-6
+                                .example.default-offset
+                                    .example__image-wrapper
+                                        +img("src/blocks/alba/assets/img/alba-product6.jpg", "example__image", "Alba sample")
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            b Pattern examples
+                            p We make up batches of Alba material in 5-10 tonne lots and batches will vary depending on the type of yoghurt pots we find. There will always be variations of a white/cream/off-white base with inclusions of silver, however there may also be colour inclusions which can vary in ratio and tone between batches. Here are some examples of current and previous batches of Alba.
+                    .col-lg-6.col-md-6
+                        .row
+                            .col-lg-6.col-md-6
+                                .example.default-offset
+                                    .example__image-wrapper
+                                        +img("src/blocks/alba/assets/img/alba-product7.jpg", "example__image", "Alba sample")
+                            .col-lg-6.col-md-6
+                                .example.default-offset
+                                    .example__image-wrapper
+                                        +img("src/blocks/alba/assets/img/alba-product8.jpg", "example__image", "Alba sample")
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            b Material
+                            p High Impact Polystyrene (post-consumer or post-industrial)
+                            b Density
+                            p Approx 1200 kg/m3
+                            b Stats
+                            p Each panel is equivalent to 1000-5000 yoghurt pots
+
+        section.section.section--offset-alba
+            .layout
+                .product-full
+                    .row
+                        .col-lg-6
+                            +productDescMain("src/blocks/alba/assets/img/alba-product9.jpg", "Alba used for a chair by Alexander Schul", "product--small-offset")
+                        .col-lg-6
+                            +productDescMain("src/blocks/alba/assets/img/alba-product10.jpg", "Kitchen byFlorian Bérenguer architects. Image by Bazarpoint Studio ", "product--small-offset")
+
+        section.section
+            .layout
+                .materials.materials__offset-bottom
+                    .row
+                        .col-lg-3.col-md-6
+                            .materials__item
+                                .materials__title
+                                    h3 BENEFITS
+                                .materials__description
+                                    ul.materials__list
+                                        li
+                                            b Highly versatile
+                                            span Wide range of applications from products and furniture to large-scale sculpture and construction
+                                        li
+                                            b Unique
+                                            span Good consistency between panels, but each one will have its own distinct pattern
+                                        li
+                                            b Handmade
+                                            span Each panel is composed by hand
+                                        li
+                                            b Sustainable
+                                            span 100% recycled and 100% recyclable
+                                        li
+                                            b Easily cared for
+                                            span The materials are easy to work with, clean and maintain
+                                        li
+                                            b No VOC off-gassing
+                                            span All of the classics range of panels are made from chemically inert recycled plastics waste
+                                            span We offer a cutting service, buy back scheme, and can make custom materials to order.
+                        .col-lg-3.col-md-6
+                            .materials__item
+                                .materials__title
+                                    h3 MATERIAL PROPERTIES
+                                .materials__description
+                                    ul.materials__list
+                                        li
+                                            span The materials in our classics range have the following properties:
+                                        li
+                                            b Hard, dense and rigid
+                                        li
+                                            span #[b 100% waterproof], rot-proof and strong weather resistance
+                                        li
+                                            b Solid and consistent,
+                                            span allowing you to have a decorative edge
+                                        li
+                                            b Moderate scratch resistance,
+                                            span and can be refinished
+                                        li
+                                            b UV resistance
+                                            span (except our Alba material, which yellows in the sun but can be refinished)
+                                        li
+                                            span #[b Can be heat-formed] into shapes
+                                        li
+                                            b Matt/planed finish,
+                                            span and can be polished
+                                        li
+                                            span #[b Can be machined, drilled, cut] (router, CNC), water cut and fixed using adhesives and screws
+                                        li
+                                            span #[b Custom Materials] (router, CNC), water cut and fixed using adhesives and screws
+                        .col-lg-3.col-md-6
+                            .materials__item
+                                .materials__title
+                                .materials__description
+                                    ul.materials__list
+                                        li
+                                            span Note: we don’t generally recommend our materials for kitchen countertops
+                                        li
+                                            span There’s an almost limitless number of ways to use our materials, but the following applications have proven particularly successful:
+                        .col-lg-3.col-md-6
+                            .materials__item
+                                .materials__title
+                                    h3 Potential APPLICATIONS
+                                .materials__description
+                                    ul.materials__list
+                                        li
+                                            b Store and Exhibition Design
+                                            span plinths, display counters, cabinets, signage, partitions and furniture
+                                        li
+                                            b Bar/Cafe/Restaurant Design
+                                            span counter tops, table tops, partitions, bathrooms, toilet cubicles
+                                        li
+                                            b Office Design
+                                            span table tops, shelving, seating, bathrooms
+                                        li
+                                            b Product and Furniture Design
+                                            span from jewellery to homeware to dining tables, both indoor and outdoor
+                                        li
+                                            b Residential
+                                            span bathroom panels, wet rooms, counter tops, splashbacks, cabinet doors, furniture and shelving
+                                        li
+                                            b Recreation
+                                            span playgrounds, swimming pools and spas
+                                        li
+                                            b Bathroom Design
+                                            span Bathroom panels, wet rooms, cabinet doors, splashbacks, counters, bathroom furniture and shelving
+
+
+        section.section
+            .layout
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Cutting", "We offer a cutting service on all our materials, from the production of semi-finished and finished parts to full product design and development. If you need help, give us a shout.", "Classic range")
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Fabrication", "We offer a range of finishes on all our material. You can choose from a large selection of edge finishes and details. If you have a particular finish you are looking for, do let us know.", "How it works")
+
+        include ../blocks/catalog/catalog
+
+        section.section.your-design.your-design--offset
+            .layout
+                .your-design__conent
+                    h3 Get Started Today
+                    p Find out how we can help you develop your ideas.
+                .your-design__button
+                    a(href="#").button.button--white Order samples
+        include ../blocks/testimonials/testimonials

@@ -1,0 +1,9 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.section-description {
+  padding-top: 8px;
+  @include padding-bottom(30px, 120px, 540px, 991px);
+  border-top: 1px solid #e6e6e6;
+}

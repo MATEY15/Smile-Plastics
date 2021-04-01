@@ -31,6 +31,20 @@
     }
   }
 
+  &__navigate {
+
+    @include mobile-large-screen {
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      height: 20px;
+      max-width: 120px;
+      width: 100%;
+      z-index: 10;
+      @include tt(-50%, 0)
+    }
+  }
+
   &__nav {
     position: absolute;
     top: 50%;
@@ -41,6 +55,20 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
+    @include mobile-large-screen {
+      width: 20px;
+      height: 20px;
+      top: 0;
+      @include tt(0, 0);
+    }
+
+    svg {
+      @include mobile-large-screen {
+        width: 7px;
+        height: 14px;
+      }
+    }
   }
 
   &__nav--prev {
@@ -48,10 +76,12 @@
     @include table-large-screen {
       left: 0;
     }
+
     svg {
       transform: scale(-1);
     }
   }
+
   &__nav--next {
     right: 20px;
     @include table-large-screen {

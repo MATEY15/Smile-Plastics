@@ -9,5 +9,9 @@ function mobileMenu() {
         $burgerButton.classList.toggle(burgerButtonActive);
         $wrapperMenu.classList.toggle(wrapperMenuActive)
     });
+    $(window).on('resize scroll', function(){
+        $burgerButton.classList.remove(burgerButtonActive);
+        $wrapperMenu.classList.remove(wrapperMenuActive)
+    });
 }
 mobileMenu();

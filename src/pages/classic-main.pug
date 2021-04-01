@@ -1,0 +1,82 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            include ../blocks/slider-banner/slider-banner
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Classic
+                    p.heading__description The materials in our classics range are all lovingly hand-crafted, with every quirk, imperfection and mottle telling a different recycling story. Each one has been tried and tested in a wide range of applications, from store design through to furniture#[br] and product design.
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productOffset("product-image11.jpg", "Alba", "Made from waste yoghurt pots", false)
+                        .col-lg-6
+                            +productOffset("product-image12.jpg", "Charcoal", "Made from plastic packaging", false)
+                        .col-lg-6
+                            +productOffset("product-image13.jpg", "Kaleido", "Made from recycled plastic bottles", false)
+                        .col-lg-6
+                            +productOffset("product-image14.jpg", "Grey Mist", "Made from plastic packaging", false)
+                        .col-lg-6
+                            +productOffset("product-image15.jpg", "Coral Dapple – Limited Edition", "Made from chopping boards and plastic packaging", false)
+                        .col-lg-6
+                            +productOffset("product-image16.jpg", "Black Dapple", "Made from chopping boards and plastic packaging", false)
+                        .col-lg-6
+                            +productOffset("product-image17.jpg", "Blue Dapple", "Made from chopping boards and plastic packaging", false)
+                        .col-lg-6
+                            +productOffset("product-image18.jpg", "Ocean", "Made from plastic packaging", false)
+                    .product__button.product__button--center.product__button--small-offset
+                        a(href="#").button.button--gray Shop Classics
+
+        section.section
+            .layout
+                include ../blocks/materials/materials
+                .product__button.product__button--center.product__button--big-offset
+                    a(href="#").button.button--gray Email us for prices and lead times
+
+
+        section.section
+            .layout
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productDesc("product-image19.jpg", "Colour-matched washes of Alba")
+                        .col-lg-6
+                            +productDesc("product-image20.jpg", "Colour-matched washes of a Grey Mist-style material")
+                    .product__button.product__button--center.product__button--medium-offset
+                        p.product__button-desc Looking for Custom materials?
+                        a(href="#").button.button--gray Email us for prices and lead times
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Cutting and Fabrication
+                    p.heading__description Do you need something cut to size?  We have a design and build service, from traditional workshop facilities to an advanced CAD/CAM CNC cutting service, #[br] and we can create semi-finished parts or finished products.
+                    .heading__button-wrapper
+                        a(href="#").button.button--gray Get a quote
+
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productOffset("product-image11.jpg", "Cutting", "We offer a cutting service on all our materials, from the production of semi-finished and finished parts to full product design and development. If you need help, give us a shout.", 'Learn More')
+                        .col-lg-6
+                            +productOffset("product-image12.jpg", "Fabrication", "We offer a range of finishes on all our material. You can choose from a large selection of edge finishes and details. If you have a particular finish you are looking for, do let us know.", 'Learn More')
+
+        section.section.your-design
+            .layout
+                .your-design__conent
+                    h3 Sign up for free lookbook and brochures
+                .your-design__button
+                    a(href="#").button.button--white Sign up now
+
+        include ../blocks/testimonials/testimonials

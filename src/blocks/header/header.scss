@@ -6,7 +6,7 @@ $subMenu: '.header__sub-wrapper';
 $headerWrapper: '.header__wrapper';
 
 .header {
-  position: fixed;
+  position: absolute;
   left: 0;
   top: 0;
   width: 100%;
@@ -15,30 +15,50 @@ $headerWrapper: '.header__wrapper';
   @include trn(.15s);
 
   &--scroll {
-    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, .1);
-
     #{$headerWrapper} {
       min-height: 80px;
-      padding: 10px 0;
+      padding: 16px 0;
     }
 
   }
 
   $scroll: '.header--scroll';
 
+  .logo {
+    font-size: 0;
+    line-height: 0;
+    z-index: 20;
+
+    &__image {
+      @include table-large-screen {
+        width: 21px;
+      }
+    }
+  }
+
   &__wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    min-height: 120px;
+    align-items: flex-start;
+    min-height: 112px;
     padding: 20px 0;
     @include trn(.15s);
+
+    @include table-large-screen {
+      min-height: 63px;
+      padding: 16px 0;
+    }
   }
 
   &__right-wrapper {
     display: flex;
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 14px;
+
+    @include table-large-screen {
+      padding-top: 6px;
+    }
   }
 
   &__menu {
@@ -49,7 +69,7 @@ $headerWrapper: '.header__wrapper';
     @include laptop-small-screen {
       margin-right: 30px;
     }
-    
+
     @include table-large-screen {
       position: fixed;
       top: 0;
@@ -62,7 +82,7 @@ $headerWrapper: '.header__wrapper';
       justify-content: center;
       margin-right: 0;
       overflow-y: auto;
-      background: #FFFFFF;
+      background: #eae9ea;
       opacity: 0;
       visibility: hidden;
     }
@@ -73,8 +93,10 @@ $headerWrapper: '.header__wrapper';
     }
   }
 
-  &__menu-list {
+  &__menu li {
     position: relative;
+    line-height: 18px;
+    padding: 4px;
 
     &:not(:last-child) {
       margin-right: 48px;
@@ -89,20 +111,23 @@ $headerWrapper: '.header__wrapper';
     }
 
     &:hover #{$subMenu} {
-      opacity: 1;
-      visibility: visible;
-      @include tt(0, 0);
+      //opacity: 1;
+      //visibility: visible;
+      //@include tt(0, 0);
+      //height: 127px;
+      //max-height: 1000px;
     }
   }
 
-  &__menu-link {
+  &__menu a {
     position: relative;
     font-size: 18px;
     letter-spacing: -0.42px;
+    line-height: 18px;
     color: #413c2d;
 
     @include table-large-screen {
-      font-size: 20px;
+      font-size: 26px;
     }
 
     &:hover {
@@ -127,16 +152,35 @@ $headerWrapper: '.header__wrapper';
   }
 
   &__sub-wrapper {
-    position: absolute;
-    top: 100%;
-    left: 0;
+    //position: absolute;
+    position: relative;
+    //top: 100%;
+    //left: 0;
     width: 100%;
-    padding-top: 8px;
+    //padding-top: 8px;
+    //padding-bottom: 5px;
+    //height: 0;
+    display: none;
+    //transition: all 1s ease-in;
+    //transition: max-height .5s, padding .5s;
+    //max-height: 0;
+    overflow: hidden;
     //background: #fff;
-    opacity: 0;
-    visibility: hidden;
-    @include tt(0, 20px);
-    @include trn(.24s);
+    //opacity: 0;
+    //visibility: hidden;
+    //@include tt(0, 20px);
+    //@include trn(.24s);
+
+    //&:before {
+    //  position: absolute;
+    //  left: 0;
+    //  top: 0;
+    //  display: block;
+    //  content: '';
+    //  background: #c1c1c1;
+    //  width: 100%;
+    //  height: 100%;
+    //}
 
     @include table-large-screen {
       position: static;
@@ -149,14 +193,25 @@ $headerWrapper: '.header__wrapper';
   }
 
   &__sub-menu {
+    padding: 8px 0 5px;
     @include table-large-screen {
       text-align: center;
+    }
+
+    li {
+      margin-bottom: 8px;
+      margin-right: 0 !important;
     }
   }
 
   &__search {
     font-size: 0;
     margin-right: 30px;
+    padding-top: 6px;
+
+    @include table-large-screen {
+      padding-top: 0;
+    }
   }
 
   &__search-button {
@@ -165,6 +220,18 @@ $headerWrapper: '.header__wrapper';
     svg {
       width: 22px;
       height: 22px;
+    }
+  }
+
+  &__card {
+    padding-top: 6px;
+
+    @include table-large-screen {
+      padding-top: 0;
+    }
+
+    a {
+      line-height: 0;
     }
   }
 

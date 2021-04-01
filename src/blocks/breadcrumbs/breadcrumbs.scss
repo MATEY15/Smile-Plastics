@@ -7,12 +7,17 @@
   padding-top: 10px;
   padding-bottom: 90px;
 
+  @include mobile-large-screen {
+    padding-bottom: 32px;
+  }
+
   &--default-offset {
     padding: 30px 0;
   }
 
   &__lists {
     display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -25,28 +30,38 @@
         margin: 0 11px;
         width: 22px;
         height: 16px;
-        background: #cccccc;
-        //background-image: url(/images/icons/arrow-breadcrumb.svg);
+        background-image: url(/images/icons/arrow.svg);
         display: inline-block;
+
+        @include mobile-large-screen {
+          width: 18px;
+          height: 13px;
+          background-size: 100%;
+        }
       }
     }
+  }
+
+  &__link {
+    text-transform: uppercase;
   }
 
   &__link,
   &__current {
     @include fm();
-    font-size: 26px;
+    @include font-size(19px, 26px, 570px, 1024px);
+    @include line-height(25px, 32px, 480px, 1800px);
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.23;
     letter-spacing: 0.02px;
     color: #000000;
     @include trn(.25s);
   }
 
-  &__link {
+  &__link,
+  &__current {
     &:hover {
-      color: #d1cfcd;
+      color: #413c2d;
     }
   }
 

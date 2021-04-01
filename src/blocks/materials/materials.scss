@@ -1,0 +1,78 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.materials {
+
+  &__border {
+    border-top: 1px solid #e6e6e6;
+  }
+
+  &__offset-bottom {
+    @include padding-bottom(30px, 90px, 540px, 1024px);
+  }
+
+  &__item {
+    @include table-large-screen {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__title {
+    min-height: 230px;
+    padding-bottom: 20px;
+    border-bottom: 3px solid #413c2d;
+
+    @include table-large-screen {
+      min-height: 130px;
+    }
+    @include mobile-large-screen {
+      min-height: auto;
+    }
+
+    h3 {
+      @include fsp();
+      @include font-size(26px, 46px, 540px, 1024px);
+      @include line-height(34px, 56px, 540px, 1024px);
+      color: #413c2d;
+    }
+  }
+
+  &__description {
+    padding-top: 25px;
+  }
+
+  &__list {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 25px;
+    }
+
+    li {
+      &:not(:last-child) {
+        margin-bottom: 35px;
+        @include table-large-screen {
+          margin-bottom: 20px;
+        }
+      }
+    }
+
+    span {
+      display: block;
+      &>b {
+        display: inline-block;
+      }
+    }
+
+    b {
+      @include fm();
+      font-weight: normal;
+      display: block;
+    }
+
+  }
+}

@@ -1,0 +1,30 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.example {
+
+  &__section {
+    padding-top: 32px;
+  }
+
+  &__image-wrapper {
+    position: relative;
+    font-size: 0;
+
+    &:before {
+      content: "";
+      padding-top: 100%;
+      display: block;
+    }
+  }
+
+  &__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

@@ -1,0 +1,159 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/slider-banner/assets/img/banner.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title SAMPLES
+                    p.heading__description The sample material varies both within the panel area and between panels. A sample only gives you a general indication of the detail of afull-sized pattern. We recommendreviewing each size below and the full-sized panels(link) or buy a larger piece to see more of the pattern. Click below to choose the pattern scale you require.
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Alba")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product1.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product2.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product3.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product4.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Grey Mist")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product5.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product6.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product7.jpg", "Medium 500mm × 500mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Charcoal")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product8.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product9.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product10.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Ocean")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product11.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product12.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product13.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Kaleido")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product14.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product15.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product16.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Blue Dapple")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product17.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product18.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Black Dapple")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product19.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product20.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product21.jpg", "Large 1200mm × 1000mm")
+
+
+                .breadcrumbs
+                    ul.breadcrumbs__lists
+                        +listBreadcrumbs("Limted Edition Coral Dapple")
+                        +listBreadcrumbs("Shop samples", true)
+
+                .product__wrapper.product__wrapper--no-border
+                    .row
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product22.jpg", "Extra Small 60mm × 100mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Small 240mm × 240mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product23.jpg", "Medium 500mm × 500mm")
+                        .col-lg-3
+                            +productDescMain("src/blocks/samples/assets/img/samples-product24.jpg", "Large 1200mm × 1000mm")
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials
