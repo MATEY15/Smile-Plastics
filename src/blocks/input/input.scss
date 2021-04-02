@@ -1,0 +1,32 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.item-custome {
+  margin-bottom: 20px;
+
+  &--button {
+    margin-top: 48px;
+  }
+
+  h4 {
+    @include fm();
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+  }
+  
+  input {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    border: 0;
+    border-bottom: 1px solid #000000;
+    width: 100%;
+    
+    @include placeholder {
+      color: #000;
+    }
+  }
+}

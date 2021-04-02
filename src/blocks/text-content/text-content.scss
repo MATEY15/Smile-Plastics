@@ -16,6 +16,20 @@
   }
 }
 
+.content-lists {
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    color: #000;
+
+    &:before {
+      content: '–';
+      margin-right: 14px;
+    }
+  }
+}
+
 .text-content {
   max-width: 840px;
   padding: 87px 15px 60px;
@@ -70,6 +84,7 @@
     }
   }
   p {
+    min-height: 1px;
     margin-bottom: 24px;
     @include mobile-large-screen {
       margin-bottom: 14px;

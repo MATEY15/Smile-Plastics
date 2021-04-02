@@ -1,0 +1,90 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section.product-preview.default-offset
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .product-preview__image
+                            a(href="src/blocks/order/assets/img/order-product3.jpg" data-effect="mfp-zoom-in").product-preview__popup
+                                img(src="src/blocks/order/assets/img/order-product3.jpg").mfp-with-anim
+
+                    .col-lg-6.col-md-6
+                        .product-preview__info
+                            .product-preview__name
+                                h3 Side Table  - Blue Dapple
+                                p Classic Side Table
+                            .product-preview__option
+                                .product-preview__items
+                                    h4 Choose base:
+                                    +checkInput(true, "Black Dapple ", "", "", "src/blocks/food-platter/assets/img/food-platter-bg1.jpg")
+                                    +checkInput("", "Blue Dapple", "", "", "src/blocks/food-platter/assets/img/food-platter-bg2.jpg")
+                                .product-preview__items
+                                    h4 Choose material:
+                                    +checkInput("", "Blue Dapple", "", "", "src/blocks/food-platter/assets/img/food-platter-bg2.jpg")
+                                .product-preview__button
+                                    button.button.button--gray Add to basket — £250
+
+        section.sectio
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .row.example
+                            .col-lg-6.col-md-6
+                                +productDescMain("src/blocks/product/assets/img/product-image.jpg", "Dimension", "product--small-offset")
+                            .col-lg-6.col-md-6
+                                +productDescMain("src/blocks/food-platter/assets/img/food-platter5.jpg", "Material", "product--small-offset")
+
+                    .col-lg-6.col-md-6
+                        .content-text.default-offset
+                            b Material
+                            p Table top: 12mm top made from 100% recycled and recyclable plastics
+                                | Base: 15mm powder coated angle iron
+                            b Technical information Approximate dimensions:
+                            p Length: 4150mm, Depth: 3150mm, Height: 4620mm
+                            b Delivery
+                            p We make the tables to order. Please allow 1-2 weeks for delivery.
+                            b COVID
+                            p Due to COVID safe working practices and increased demand, samples are taking a little longer than usual, please bear with us and we apologise for any inconvenience.
+
+        section.section.catalog.catalog--offset-big
+            .layout
+                .row
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image12.jpg", "Charcoal")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image13.jpg", "Kaleido")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image14.jpg", "Grey Mist")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image15.jpg", "Coral Dapple – Limited Edition")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image16.jpg", "Black Dapple")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image17.jpg", "Blue Dapple")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image18.jpg", "Ocean")
+                    .col-lg-3.col-md-4.col-sm-6
+                        +catalogItem("src/blocks/product/assets/img/product-image11.jpg", "Alba")
+
+        section.section
+            .layout
+                .section__head
+                    h3 YOU May LIKE
+                .default-offset.row
+                    .col-lg-6.col-md-6
+                        +productMain("src/blocks/order/assets/img/order-product4.jpg", "", "", "Shop Chopping board")
+                    .col-lg-6.col-md-6
+                        +productMain("src/blocks/product/assets/img/product-image.jpg", "", "", "Shop Chopping board")
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

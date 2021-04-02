@@ -1,0 +1,155 @@
+extends ../templates/main
+
+include ../blocks/product/product
+
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/slider-banner/assets/img/banner4.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Get started
+                    p.heading__description You made it. We’re so happy you want to get started using our 100% recycled /100% recyclable materials. Fill the form below to get started.
+                    p.heading__description  We‘ve found the quickest turnaround happens if we have the full details from you at the start, adding as much detail as possible to answer your questions. #[br]
+                        | See the details below we need if you are placing an order
+
+                .row
+                    .col-lg-6.col-md-6
+                        .section__head
+                            h3 Custom Materials
+                        .row
+                            .col-lg-6.col-md-6
+                                .materials
+                                    .materials__item
+                                        .materials__title.materials__title--small-offset
+                                            h3 Aesthetics
+                                        .materials__description
+                                            ul.materials__list
+                                                li
+                                                    b What colours/patterns #[br]
+                                                        | do you want?
+                                                    span Colour palettes, moodboards, mock-ups, and inspirations can all be very helpful. We can usually colour match RAL colours by eye if required.
+                                                li
+                                                    b Do you have a preferred plastic-type?
+                                                    span They can feel and look different, so if you have a strong preference, please tell us.
+                                                li
+                                                    b What is the end-use?
+                                                    span If we know this, we can advise which materials and thicknesses would be best for your application.
+                                                li
+                                                    b How much material do you need?
+                                                    span How much material do you need? #[br]
+                                                        | Is this a one-off order, or will #[br]
+                                                        | you need lots of material #[br]
+                                                        | over a long period of time? #[br]
+                                                        | These can affect the costs and production methods we use
+                                                li
+                                                    b Do you need specific properties from the material?
+                                                    span We can usually source materials with specific properties (like higher fire resistances) if required.
+                            .col-lg-6.col-md-6
+                                .materials
+                                    .materials__item
+                                        .materials__title.materials__title--small-offset
+                                            h3 MATERIALS
+                                        .materials__description
+                                            ul.materials__list
+                                                li
+                                                    b What materials do you have?
+                                                    span Please give us an idea of the material type, condition, and quantity. If possible, also send us any data sheets or technical information that you have on the materials.
+                                                li
+                                                    b Does it need processing?
+                                                    span Usually, we would need the material to be cleaned and shredded before we can use it, but we may be able to do this for you.
+                                                li
+                                                    b What is the end-use?
+                                                    span An idea of the application of the sheets can help us advise on how we work with the material.
+                                                li
+                                                    b Are you looking to add colours or patterns?
+                                                    span We can usually add pigment or patterns to the material provided or leave it to speak for itself.
+                                                li
+                                                    b What scale would this be?
+                                                    span We can help with a one-off project or look at setting up an ongoing partnership.
+
+                    .col-lg-6.col-md-6
+                        .section__head
+                            h3 Classic Materials
+                        .row
+                            .col-lg-6.col-md-6
+                                .materials
+                                    .materials__item
+                                        .materials__title.materials__title--small-offset
+                                            h3 Aesthetics
+                                        .materials__description
+                                            ul.materials__list
+                                                li
+                                                    b What Classic material are you interested in?
+                                                    span Please specify the materials you would like to work with on your project.
+                                                li
+                                                    b What is the end-use?
+                                                    span If we know this, we can advise which materials and thicknesses would be best for your application.
+                                                li
+                                                    b How much material do you need?
+                                                    span How much material do you need? #[br]
+                                                        | Is this a one-off order, or will #[br]
+                                                        | you need lots of material #[br]
+                                                        | over a long period of time? #[br]
+                                                        | These can affect the costs and production methods we use
+                                                li
+                                                    b Do you need specific properties from the material?
+                                                    span Check the material properties under the Classic material page.
+
+                            .col-lg-6.col-md-6
+                                .materials
+                                    .materials__item
+                                        .materials__title.materials__title--small-offset
+                                            h3 Details
+                                        .materials__description
+                                            ul.materials__list
+                                                li
+                                                    b Where are you based?
+                                                    span Tell us where you are based so we can provide estimated shipping costs.
+                                                li
+                                                    b When do you need the order?
+                                                    span If you tell us the date you would like your order delivered, we can provide an estimated lead time for you.
+                                                li
+                                                    b Do you need cutting and Fabrication?
+                                                    span We now offer a cutting and fabrication service. See the Cutting and Fabrication page under Offerings for details. If you tell us your requirements in advance, we can include this in your lead time.
+
+        section.section.section--offset-top
+            .layout
+                .row
+                    .col-lg-6.col-md-6
+                        .default-image
+                            +img("src/blocks/get-started/assets/img/get-started1.jpg", "", "Product")
+                    .col-lg-6.col-md-6
+                        form.form-custome
+                            .item-custome
+                                h4.form-custome__name Enquiry form
+                            .item-custome
+                                input(type="text" placeholder="Company Name")
+                            .item-custome
+                                input(type="text" placeholder="Full Name")
+                            .item-custome
+                                input(type="text" placeholder="Address")
+                            .item-custome
+                                input(type="text" placeholder="Phone")
+                            .item-custome
+                                input(type="text" placeholder="Email")
+                            .item-custome
+                                input(type="text" placeholder="Message")
+
+        section.section.your-design
+            .layout
+                .your-design__conent
+                    h3 Sign up for our free lookbook and brochures
+                .your-design__button
+                    a(href="#").button.button--white Sign up now
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

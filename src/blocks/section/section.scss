@@ -2,8 +2,56 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+.full-wrapper {
+  position: relative;
+  max-height: 900px;
+  min-height: 900px;
+  background: #000;
+  font-size: 0;
+
+  @include laptop-small-screen {
+    min-height: 550px;
+  }
+
+  @include tablet-big-screen {
+    min-height: 490px;
+  }
+  @include table-large-screen {
+    min-height: auto;
+  }
+
+  img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+    @include table-large-screen {
+      position: relative;
+      max-width: 100%;
+      height: auto;
+    }
+  }
+}
+
 .section {
   overflow: hidden;
+
+  &__head {
+    padding-top: 8px;
+    border-top: 1px solid #e6e6e6;
+    @include padding-bottom(30px, 85px, 540px, 1024px);
+    h3 {
+      @include fm();
+      letter-spacing: 0.02px;
+      color: #000000;
+      @include font-size(20px, 26px, 540px, 1024px);
+      @include line-height(26px, 32px, 540px, 1024px);
+      text-transform: uppercase;
+    }
+  }
 
   &__order {
     padding: 32px 0;
@@ -34,6 +82,10 @@
   &--offset-equally {
     @include padding-top(0px, 120px, 540px, 991px);
     @include padding-bottom(60px, 120px, 540px, 991px);
+  }
+
+  &--border-top {
+    border-top: 1px solid #e6e6e6;
   }
 
 }

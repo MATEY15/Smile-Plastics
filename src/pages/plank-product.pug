@@ -20,8 +20,15 @@ block content
                     .col-lg-6.col-md-6
                         .product-preview__info
                             .product-preview__name
-                                h3 Alba
+                                h3 Planks
+                                p Our versatile planks are suitable for all sorts of design projects; not only that, and they make one helluva shelf.  What can you make with these?
                             .product-preview__option
+                                .product-preview__items
+                                    h4 Choose material:
+                                    select.select-main
+                                        option Blue Dapple
+                                        option Blue Dapple 1
+                                        option Blue Dapple 2
                                 .product-preview__items
                                     h4 Choose size:
                                     select.select-main
@@ -35,34 +42,20 @@ block content
                                         option 14mm
                                         option 16mm
                                 .product-preview__button
-                                    button.button.button--gray Add to basket — £10
-
-
-
+                                    button.button.button--gray Add to basket — £42
 
         section.section
             .layout
                 .row
                     .col-lg-6.col-md-6
                         .row.example
-                            .col-lg-4.col-md-4
-                                .example__image-wrapper.default-offset
-                                    +img("src/blocks/product-preview/assets/img/samples-page-product2.jpg", "example__image", "Alba sample")
-                            .col-lg-4.col-md-4
-                                .example__image-wrapper.default-offset
-                                    +img("src/blocks/product-preview/assets/img/samples-page-product3.jpg", "example__image", "Alba sample")
-                            .col-lg-4.col-md-4
-                                .example__image-wrapper.default-offset
-                                    +img("src/blocks/product-preview/assets/img/samples-page-product4.jpg", "example__image", "Alba sample")
-
                             .col-lg-6.col-md-6
-                                +productDescMain("src/blocks/alba/assets/img/alba-product2.jpg", "12mm", "product--dark")
+                                +productDescMain("src/blocks/alba/assets/img/alba-product2.jpg", "20mm edge", "product--dark")
                             .col-lg-6.col-md-6
-                                +productDescMain("src/blocks/alba/assets/img/alba-product3.jpg", "20mm", "product--dark")
+                                +productDescMain("src/blocks/alba/assets/img/alba-product3.jpg", "20mm edge", "product--dark")
 
                     .col-lg-6.col-md-6
                         .content-text.default-offset
-                            p #[b Looking for larger sheet?] Please #[a(href="#" contact us)] for details #[br] and pricing for our 2000mm x 1 000mm #[br] and 3000mm x 1200mm sheets
                             b Delivery
                             p Our samples take approximately 1-3 weeks to arrive within the UK and 2 weeks outside of the UK.
                             b COVID
@@ -70,10 +63,8 @@ block content
                             p
                             a(href="#").button.button--gray More about Alba
 
-        section.section.catalog.catalog--border-top
+        section.section.section--offset-top.catalog
             .layout
-                .catalog__head
-                    h3 More samples
                 .row
                     .col-lg-3.col-md-4.col-sm-6
                         +catalogItem("src/blocks/product-preview/assets/img/samples-page-product7.jpg", "Grey Mist ")
@@ -91,6 +82,16 @@ block content
                         +catalogItem("src/blocks/product-preview/assets/img/samples-page-product13.jpg", "Limted Edition Coral Dapple")
                     .col-lg-3.col-md-4.col-sm-6
                         +catalogItem("src/blocks/product-preview/assets/img/samples-page-product14.jpg", "Alba")
+
+        section.section
+            .layout
+                .section__head
+                    h3 YOU May LIKE
+                .default-offset.row
+                    .col-lg-6.col-md-6
+                        +productMain("src/blocks/order/assets/img/order-product3.jpg", "", "", "Shop table")
+                    .col-lg-6.col-md-6
+                        +productMain("src/blocks/product/assets/img/product-image.jpg", "", "", "Shop table")
 
         include ../blocks/your-design/your-design
         include ../blocks/preview/preview

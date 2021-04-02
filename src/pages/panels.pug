@@ -1,0 +1,138 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/cutting/assets/img/cutting1.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Panels
+                    p.heading__description Say hello to our new Supersize panels standing at a colossal 3000mm high #[br] and 1200mm wide. We told you the big boards were coming, now we’re ready to go.
+                    .heading__button-wrapper
+                        a(href="#").button.button--gray Email us for prices and lead times
+                .section--offset-equally.section--border-top
+                    .row
+                        .col-lg-6.col-md-6
+                            .content-text
+                                b Panel Information
+                                p Every panel is unique, and colour and pattern may vary from sheet to sheet and from batch to batch. If you strictly need to minimise colour variation, discuss your needs with us prior to order to make sure all your material comes from the same batch.
+                                p We try very hard to make our sheets as blemish-free as we can, but they are not perfect; for example, they may have dimples and minor marks which are outside our control. Please contact us to discuss this if it could be a problem. #[br]
+                                    | The listed board thicknesses are nominal: thermal expansion of some sheets can be 2mm per metre over a10degree (Celcius) range.
+                                p High Impact Polystyrene is a flammable material and should be placed at a sufficient distance from any naked flame.
+
+                        .col-lg-6.col-md-6
+                            .content-text
+                                b Dimensions
+                                p 3000mm×1200mm, 2000mm×1000mm though often the panel will arrive slightly larger with unfinished edges #[br]
+                                    | (approx. 2090mm×1090mm).
+                                b Thicknesses
+                                p 5mm, 12mm, 20mm
+                                b Prices and lead times
+                                p Please email us at info@smile-plastics.com to enquire about prices and lead times, mentioning the quantity, and thickness of panels you require and any deadlines. Most of our panels are made to order and we hold very limited stock. Expect 2-8 week lead times for most orders. Smile Plastics’ terms and conditions apply to all sales.
+                                b Shipping
+                                p We are able to ship internationally within and outside of Europe as individual packages or on double pallets. Please email info@smile-plastics.comfor a quote.
+
+        section.section.default-offset
+            .layout
+                .section__head
+                    h3 Large
+            .full-wrapper.default-offset
+                +img("src/blocks/cutting/assets/img/cutting5.jpg", "full-wrapper__image", "Large")
+
+            .layout
+                .row
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                .product__content-size.product__content-size--no-offset
+                    a(href="#").button.button--gray Shop supersize and large panels
+                    p.product__text-size 3000mm × 1200mm and 2000mm × 1000mm
+
+        section.section.default-offset
+            .layout
+                .section__head
+                    h3 Medium
+                .row
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                    .col-lg-3.col-md-3
+                        .example__image-wrapper.default-offset
+                            +img("src/blocks/product/assets/img/product-image.jpg", "example__image", "Example image")
+                .product__content-size.product__content-size--no-offset
+                    a(href="#").button.button--gray Shop mid panel
+                    p.product__text-size 1200mm × 1000mm
+
+        section.section.default-offset
+            .layout
+                .section__head
+                    h3 Planks
+            .full-wrapper.default-offset
+                +img("src/blocks/cutting/assets/img/cutting5.jpg", "full-wrapper__image", "Large")
+
+            .layout
+                .product__content-size.product__content-size--no-offset
+                    a(href="#").button.button--gray Shop planks
+                    p.product__text-size 2000mm × 200mm and 1000mm × 200mm
+
+        section.section
+            .layout
+                .product__wrapper
+                    .row
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Cutting", "We offer a cutting service on all our materials, from the production of semi-finished and finished parts to full product design and development. If you need help, give us a shout.", "Classic range")
+                        .col-lg-6
+                            +productMain("src/blocks/product/assets/img/product-image.jpg", "Fabrication", "We offer a range of finishes on all our material. You can choose from a large selection of edge finishes and details. If you have a particular finish you are looking for, do let us know.", "How it works")
+
+        include ../blocks/your-design/your-design
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

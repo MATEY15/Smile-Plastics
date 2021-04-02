@@ -1,0 +1,103 @@
+extends ../templates/main
+
+include ../blocks/product/product
+include ../blocks/breadcrumbs/breadcrumbs
+
+block variables
+    - var title = 'Smile Plastics'
+
+block content
+    main.main
+
+        section.section
+            .banner-header
+                +img("src/blocks/product/assets/img/product-image-full.jpg", "banner-header__image", "Banner")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Cutting and Finishing
+                    p.heading__description We offer a cutting and fabrication service on all our materials from the production of semi-finished and finished parts to full product design and development.
+
+            .full-wrapper
+                +img("src/blocks/cutting/assets/img/cutting1.jpg", "full-wrapper__image", "Mission Post")
+
+            .section--offset-equally
+                .layout
+                    .row
+                        .col-lg-6.col-md-6
+                            .content-text
+                                p We can work on any scale of project from prototyping and one-off commissions to small and larger batch production. Do #[a(href="#") get in touch] to talk about your project.
+                        .col-lg-6.col-md-6
+                            .content-text
+                                b Key services include:
+                                ul.content-lists
+                                    li Product design engineering / 3D CAD CAM
+                                    li CNC cutting/drilling
+                                    li Circular saw cutting
+                                    li Finishing
+                                    li Assembly of parts
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title CNC Routing
+                    p.heading__description We have advanced 3-axis CNC machining capabilities in house offering you simple profile cutting and finished product manufacturing.
+
+            .full-wrapper.default-offset
+                +img("src/blocks/cutting/assets/img/cutting2.jpg", "full-wrapper__image", "Mission Post")
+
+            .full-wrapper
+                +img("src/blocks/cutting/assets/img/cutting3.jpg", "full-wrapper__image", "Mission Post")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Edge Details
+                    p.heading__description We can offer a range of edge details. #[a(href="#") Contact us] to discuss.
+                .row
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "90 degree raw cut ")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "90 degree hand/machine polish")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "Bullnose edge")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "Chamfered edge")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "Fillet edge")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "One more to be added")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "One more to be added")
+                    .col-lg-3.col-md-3
+                        +productDescOffset("product-image.jpg", "One more to be added")
+
+            .product-full
+                +productDescMainFull("src/blocks/product/assets/img/product-image-full.jpg", "Double layered 40mm counter detail for Bofink, designed Sneakersnstuff store, LA", "product--small-offset")
+            .product-full
+                +productDescMainFull("src/blocks/cutting/assets/img/cutting4.jpg", "90 degree half lap jointed return counter for Hej Coffee Bar at Societe Generale, London.", "product--small-offset")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Wall Saw
+            .full-wrapper
+                +img("src/blocks/product/assets/img/product-image-full.jpg", "full-wrapper__image", "Mission Post")
+
+        section.section.section--offset-top
+            .layout
+                .heading
+                    h3.heading__title Laser-Cutting
+                    p.heading__description We do not recommend laser cutting our Classics materials and don’t currently offer this service. If laser cutting is a key part of your design using Smile Plastics, we may be able to create a custom material that is more compatible with this technology.#[br] Contact us to discuss your needs.
+                    p.heading__description Laser etching however can work the PET materials.
+
+        section.section.your-design.your-design--offset
+            .layout
+                .your-design__conent
+                    h3 Need further information about #[br] Cutting and fabrication services?
+                .your-design__button
+                    a(href="#").button.button--white Email us for more details and prices
+
+        include ../blocks/preview/preview
+        include ../blocks/testimonials/testimonials

@@ -3,7 +3,14 @@
 @import "../../blocks/base/media-queries";
 
 .catalog {
-  //border-top: solid 1px #e6e6e6;
+
+  &--border-top {
+    border-top: solid 1px #e6e6e6;
+  }
+
+  &--offset-big {
+    @include padding-top(40px, 100px, 540px, 991px);
+  }
 
   &__head {
     @include fm();

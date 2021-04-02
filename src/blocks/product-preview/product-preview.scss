@@ -6,6 +6,7 @@
   padding-top: 36px;
 
   &__image {
+    font-size: 0;
     a {
       position: relative;
       display: inline-flex;
@@ -18,8 +19,8 @@
   &__name {
     @include margin-bottom(22px, 29px, 540px, 991px);
   }
-  &__name,
-  &__items label {
+  &__name h3,
+  &__items h4 {
     display: block;
     @include fm();
     font-weight: normal;
@@ -27,7 +28,7 @@
     line-height: 29px;
     letter-spacing: -1px;
   }
-  &__items label {
+  &__items h4 {
     margin-bottom: 10px;
   }
   &__items {

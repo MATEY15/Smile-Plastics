@@ -8,43 +8,20 @@ $(".popup").magnificPopup({
 });
 
 $(document).ready(function() {
+
+    // Image popups
     $('.product-preview__popup').magnificPopup({
+        // delegate: 'a',
         type: 'image',
+        removalDelay: 500, //delay removal by X to allow out-animation
+        callbacks: {
+            beforeOpen: function() {
+                this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
+                this.st.mainClass = this.st.el.attr('data-effect');
+            }
+        },
         closeOnContentClick: true,
-        mainClass: 'mfp-with-zoom mfp-img-mobile',
-        image: {
-            verticalFit: true
-        }
-
+        midClick: true // allow opening popup on middle mouse click. Always set it to true if you don't provide alternative source.
     });
+
 });
-
-// Video popups
-
-// $('.popup-youtube, .popup-vimeo, .popup-gmaps').magnificPopup({
-//     disableOn: 700,
-//     type: 'iframe',
-//     mainClass: 'mfp-fade',
-//     removalDelay: 160,
-//     preloader: false,
-//
-//     fixedContentPos: false
-// });
-//
-// // Gallery popups
-// $('.product-preview__popup').magnificPopup({
-//     delegate: 'a',
-//     type: 'image',
-//     removalDelay: 500,
-//     callbacks: {
-//         beforeOpen: function () {
-//             this.st.image.markup = this.st.image.markup.replace('mfp-figure', 'mfp-figure mfp-with-anim');
-//             this.st.mainClass = this.st.el.attr('data-effect');
-//         }
-//     },
-//     closeOnContentClick: true,
-//     midClick: true,
-//     gallery: {
-//         enabled: true
-//     }
-// });
