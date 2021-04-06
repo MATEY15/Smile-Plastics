@@ -1,0 +1,101 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.load-file {
+
+}
+
+.upload-file {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.MultiFile-wrap input {
+  width: .1px;
+  height: .1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1;
+}
+
+.MultiFile-wrap input+label {
+  font-size: 1.25em;
+  font-weight: 700;
+  color: #fff;
+  background-color: #000;
+  display: inline-block;
+}
+
+.MultiFile-wrap input+label:hover,.MultiFile-wrap input:focus+label {
+  background-color: red;
+}
+
+.upload-file__label {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  font-size: 16px;
+  @include fm();
+  letter-spacing: -0.3px;
+  text-align: center;
+  color: #413c2d;
+  cursor: pointer;
+}
+
+.MultiFile-list {
+
+}
+
+.MultiFile-label {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.MultiFile-list>.MultiFile-label {
+  margin-bottom: 0;
+  &:last-child {
+    margin-bottom: 22px;
+  }
+}
+
+.MultiFile-remove {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 25px;
+  height: 25px;
+  text-decoration: none;
+  border-radius: 6px;
+  background-image: url(/images/icons/close.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  font-size: 0;
+  margin-left: 10px;
+}
+
+.MultiFile-remove+span {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+span.MultiFile-title {
+  font-size: 22px;
+  line-height: 29px;
+  letter-spacing: -1px;
+  max-width: 170px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+
+  @include mobile-large-screen {
+    font-size: 18px;
+    line-height: 25px;
+  }
+}

@@ -79,6 +79,14 @@
     }
   }
 
+  &--offset-bottom {
+    padding-bottom: 95px;
+
+    @include mobile-large-screen {
+      padding-top: 35px;
+    }
+  }
+
   &--offset-equally {
     @include padding-top(0px, 120px, 540px, 991px);
     @include padding-bottom(60px, 120px, 540px, 991px);

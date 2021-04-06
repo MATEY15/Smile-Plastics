@@ -5,6 +5,7 @@ include ../blocks/breadcrumbs/breadcrumbs
 
 block variables
     - var title = 'Smile Plastics'
+    - var cookies = true
 
 block content
     main.main
@@ -51,6 +52,26 @@ block content
                     +item("Track order", "track-order.html")
                     +item("Delivery", "delivery.html")
 
+        section.section.section--offset-equally
+            .layout
+                .popup
+                    h3.popup__head Let’s keep in touch!
+                    .popup__content
+                        p Sign up for our newsletter and stay up to date on our products, projects and everything around Smile Plastics.
+                        p Follow us on #[a(href="#") Instagram] for weekly updates.
+                        p
+                        p
+                    .subscribe
+                        form.subscribe__form
+                            input(type="text" placeholder="Your Email")
+                            button.button.button--white Subscribe
+
+                    .sign
+                        p We respect your privacy.
+
+
+
         include ../blocks/your-design/your-design
         include ../blocks/preview/preview
         include ../blocks/testimonials/testimonials
+

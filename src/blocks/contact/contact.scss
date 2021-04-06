@@ -1,0 +1,67 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.contact {
+  padding-bottom: 96px;
+
+  &__info {
+
+  }
+  &__info-item {
+    display: flex;
+    margin-bottom: 25px;
+    @include table-large-screen {
+      flex-wrap: wrap;
+      margin-bottom: 14px;
+    }
+  }
+  &__info-name {
+    @include fm();
+    font-size: 16px;
+    line-height: 32px;
+    letter-spacing: 0.15px;
+    color: #000000;
+    text-transform: uppercase;
+    min-width: 200px;
+    @include mobile-large-screen {
+      font-size: 14px;
+      line-height: 25px;
+    }
+  }
+  &__info-desc {
+    font-size: 22px;
+    line-height: 29px;
+    letter-spacing: -1px;
+    @include mobile-large-screen {
+      font-size: 18px;
+      line-height: 25px;
+    }
+  }
+  
+  a {
+    color: #000;
+  }
+
+  &__form {
+    margin-top: 130px;
+    @include table-large-screen {
+      margin-top: 60px;
+    }
+  }
+
+}
+
+.map {
+  @include table-large-screen {
+    margin-bottom: 30px;
+  }
+  &__style {
+    width: 100%;
+    min-height: 780px;
+
+    @include table-large-screen {
+      min-height: 480px;
+    }
+  }
+}

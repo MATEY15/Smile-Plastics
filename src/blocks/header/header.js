@@ -1,29 +1,45 @@
-// headerScroll();
+headerScroll();
 
 function headerScroll() {
     let $topHeader = $('.header');
     let scrollClass = 'header--scroll';
 
-    checkHeaderPosition();
+    let lastScrollTop = 0;
+    $(window).scroll(function(event){
+        let st = $(this).scrollTop();
 
-    function checkHeaderPosition() {
 
-        if ($(window).scrollTop() > 0) {
-            $topHeader.addClass(scrollClass);
+        if (st > lastScrollTop){
+            $topHeader.removeClass(scrollClass);
         } else {
+            $topHeader.addClass(scrollClass);
+        }
+
+        if ($(this).scrollTop() >= 120) {
+            $topHeader.addClass('header--hide');
+        }
+        else {
+            $topHeader.removeClass('header--hide');
             $topHeader.removeClass(scrollClass);
         }
+
+        lastScrollTop = st;
+    });
+
+    // checkHeaderPosition();
+
+    function checkHeaderPosition() {
+        let st = $(this).scrollTop();
+        if (st > lastScrollTop){
+            $topHeader.removeClass(scrollClass);
+        } else {
+            $topHeader.addClass(scrollClass);
+        }
+        lastScrollTop = st;
 
         requestAnimationFrame(checkHeaderPosition);
     }
 }
-
-// function headerHeight() {
-//     let headerHeight = document.querySelector('.header').offsetHeight,
-//         body = document.querySelector('body');
-//     body.style.paddingTop = headerHeight + "px";
-// }
-// headerHeight();
 
 
 let catalogMenuName = 'headerMenu';
@@ -41,13 +57,21 @@ window.catalogMenu = new menu(
 
 function subMenu() {
     let headerMenuList = $('.header__menu li');
-    headerMenuList.each(function(index, item) {
-        $(item).hover(()=> {
-            if($(item).find('.header__sub-wrapper')) {
-                console.log($(item).find('.header__sub-menu').outerHeight())
-                $(item).find('.header__sub-wrapper').slideToggle()
-            }
-        })
-    });
+    if(headerMenuList.find('.header__sub-wrapper').length){
+        headerMenuList.each(function(index, item) {
+            $(item).hover(()=> {
+                hoverElem($(item));
+                // $(item).find('.header__sub-wrapper').slideToggle()
+            })
+        });
+    }
+    function hoverElem(element) {
+        let hoverNow = false;
+        if(!hoverNow) {
+            element.find('.header__sub-wrapper').slideToggle(270)
+            hoverNow = true;
+        }
+
+    }
 }
 subMenu();

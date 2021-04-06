@@ -2,8 +2,23 @@
 @import "../../blocks/base/variables";
 @import "../../blocks/base/media-queries";
 
+.form-custome {
+  &__items {
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__button {
+    margin-top: 30px;
+  }
+}
+
 .item-custome {
-  margin-bottom: 20px;
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 
   &--button {
     margin-top: 48px;

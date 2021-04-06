@@ -122,7 +122,7 @@ block content
                                                     b Do you need cutting and Fabrication?
                                                     span We now offer a cutting and fabrication service. See the Cutting and Fabrication page under Offerings for details. If you tell us your requirements in advance, we can include this in your lead time.
 
-        section.section.section--offset-top
+        section.section.section--offset-top.section--offset-bottom
             .layout
                 .row
                     .col-lg-6.col-md-6
@@ -130,20 +130,39 @@ block content
                             +img("src/blocks/get-started/assets/img/get-started1.jpg", "", "Product")
                     .col-lg-6.col-md-6
                         form.form-custome
-                            .item-custome
-                                h4.form-custome__name Enquiry form
-                            .item-custome
-                                input(type="text" placeholder="Company Name")
-                            .item-custome
-                                input(type="text" placeholder="Full Name")
-                            .item-custome
-                                input(type="text" placeholder="Address")
-                            .item-custome
-                                input(type="text" placeholder="Phone")
-                            .item-custome
-                                input(type="text" placeholder="Email")
-                            .item-custome
-                                input(type="text" placeholder="Message")
+                            .form-custome__items
+                                .item-custome
+                                    h4.form-custome__name Enquiry form
+                                .item-custome
+                                    input(type="text" placeholder="Company Name")
+                                .item-custome
+                                    input(type="text" placeholder="Full Name")
+                                .item-custome
+                                    input(type="text" placeholder="Address")
+                                .item-custome
+                                    input(type="text" placeholder="Phone")
+                                .item-custome
+                                    input(type="text" placeholder="Email")
+                                .item-custome
+                                    input(type="text" placeholder="Message")
+
+                            .form-custome__items
+                                +checkboxForm(true, "Retailer")
+                                +checkboxForm("", "Architect")
+                                +checkboxForm("", "Interior Designer")
+                                +checkboxForm("", "Designer")
+                                +checkboxForm("", "Fabricator")
+                                +checkboxForm("", "Creative")
+                                +checkboxForm("", "Other")
+
+                            .form-custome__items
+                                .upload-file
+                                    label.upload-file__label
+                                        | + Attach a File
+                                    input(type="file" multiple="multiple").load-file
+                                .form-custome__button
+                                    button.button.button--gray Submit your enquiry
+
 
         section.section.your-design
             .layout

@@ -53,6 +53,16 @@ mixin checkInput(checked, name, size, price, src)
                 span.checkbox-button__bg
                     img(src=src alt="Background product")
 
+mixin checkboxForm(checked, name)
+    label.checkbox-form
+        if checked == true
+            input.checkbox-form__input(type="checkbox" checked="checked" required="")
+        else
+            input.checkbox-form__input(type="checkbox" required="")
+        .checkbox-form__text
+            .checkbox-form__status
+            p= name
+
 mixin catalogItem(image, name)
     .catalog__item
         .catalog__image-wrapper

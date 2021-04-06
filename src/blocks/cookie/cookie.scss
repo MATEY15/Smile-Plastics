@@ -1,0 +1,63 @@
+@import "../../libs/scss/mixins";
+@import "../../blocks/base/variables";
+@import "../../blocks/base/media-queries";
+
+.cookie {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  max-width: 560px;
+  width: 100%;
+  padding: 24px 32px;
+  background-color: #413c2d;
+  color: #FFFFFF;
+
+  @include mobile-small-screen {
+    right: 15px;
+    bottom: 15px;
+    max-width: 414px;
+  }
+
+  @include mobile-mini-screen {
+    right: 0;
+    bottom: 0;
+    max-width: 414px;
+  }
+
+  &__contents {
+    a {
+      position: relative;
+      color: #FFFFFF;
+      &:hover {
+        &:before {
+          opacity: 0;
+          visibility: hidden;
+        }
+      }
+      &:before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        content: '';
+        width: 100%;
+        height: 1px;
+        background: #FFFFFF;
+        @include trn(.2s);
+      }
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    color: #FFFFFF;
+    margin-top: 32px;
+    @include trn(.2s);
+    &:hover {
+      opacity: .7;
+    }
+    svg {
+      fill: #FFFFFF;
+      margin-right: 10px;
+    }
+  }
+}

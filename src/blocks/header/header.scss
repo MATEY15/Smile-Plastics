@@ -6,17 +6,24 @@ $subMenu: '.header__sub-wrapper';
 $headerWrapper: '.header__wrapper';
 
 .header {
-  position: absolute;
+  position: fixed;
   left: 0;
   top: 0;
   width: 100%;
   background: #FFFFFF;
   z-index: 100;
-  @include trn(.15s);
+  @include trn(.3s);
+
+  &--hide {
+    min-height: 80px;
+    top: -200px;
+  }
 
   &--scroll {
+    top: 0;
+    position: fixed;
+    min-height: 80px;
     #{$headerWrapper} {
-      min-height: 80px;
       padding: 16px 0;
     }
 
@@ -223,6 +230,25 @@ $headerWrapper: '.header__wrapper';
     }
   }
 
+  &__card-coun {
+    position: absolute;
+    right: -8px;
+    top: -4px;
+    font-family: UntitledSans-Medium,sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 11px;
+    text-align: center;
+    color: #fff;
+    min-width: 18px;
+    height: 18px;
+    padding: 2px 1px 2px 0;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    background-color: #413c2d;
+    z-index: 10;
+  }
+
   &__card {
     padding-top: 6px;
 
@@ -231,6 +257,7 @@ $headerWrapper: '.header__wrapper';
     }
 
     a {
+      position: relative;
       line-height: 0;
     }
   }

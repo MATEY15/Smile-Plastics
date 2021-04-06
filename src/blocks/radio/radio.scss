@@ -9,6 +9,9 @@ $checkBoxText: '.checkbox-button__text';
 $checkBoxStatus: '.checkbox-button__status';
 $checkBoxItemStatus: '.checkbox-item__status';
 
+$checkBoxFormText: '.checkbox-form__text';
+$checkBoxFormStatus: '.checkbox-form__status';
+
 .radio-button {
   display: inline-block;
 
@@ -181,19 +184,6 @@ $checkBoxItemStatus: '.checkbox-item__status';
     margin-right: 11px;
     border-radius: 50%;
     @include trn(.2s);
-
-    //&:before {
-    //  position: absolute;
-    //  top: 4px;
-    //  left: 4px;
-    //  content: '';
-    //  width: 10px;
-    //  height: 10px;
-    //  margin-right: 4px;
-    //  background: #4637A5;
-    //  @include trn(.1s);
-    //  opacity: 0;
-    //}
   }
 
   &__desc {
@@ -239,6 +229,40 @@ $checkBoxItemStatus: '.checkbox-item__status';
     }
   }
 
+}
+
+
+.checkbox-form {
+  position: relative;
+  display: flex;
+  cursor: pointer;
+  user-select: none;
+
+  &__input {
+    display: none;
+    z-index: -1;
+    opacity: 0;
+
+    &:checked + #{$checkBoxFormText} #{$checkBoxFormStatus} {
+      background: #413c2d;
+    }
+  }
+
+  &__text {
+    display: flex;
+    align-items: center;
+  }
+
+  &__status {
+    position: relative;
+    background-color: transparent;
+    border: 1px solid #413c2d;
+    box-sizing: border-box;
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+    @include trn(.18s);
+  }
 }
 
 // CheckBox Items
