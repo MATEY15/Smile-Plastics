@@ -167,7 +167,7 @@ $headerWrapper: '.header__wrapper';
     //padding-top: 8px;
     //padding-bottom: 5px;
     //height: 0;
-    display: none;
+    //display: none;
     //transition: all 1s ease-in;
     //transition: max-height .5s, padding .5s;
     //max-height: 0;
@@ -262,4 +262,19 @@ $headerWrapper: '.header__wrapper';
     }
   }
 
+}
+
+.sub-menu {
+  width: 180px;
+  padding: 8px 0 5px;
+  @include trn(.2s);
+  overflow: hidden;
+  @include table-large-screen {
+    text-align: center;
+  }
+
+  li {
+    margin-bottom: 8px;
+    margin-right: 0 !important;
+  }
 }

@@ -5,11 +5,11 @@ function headerScroll() {
     let scrollClass = 'header--scroll';
 
     let lastScrollTop = 0;
-    $(window).scroll(function(event){
+    $(window).scroll(function (event) {
         let st = $(this).scrollTop();
 
 
-        if (st > lastScrollTop){
+        if (st > lastScrollTop) {
             $topHeader.removeClass(scrollClass);
         } else {
             $topHeader.addClass(scrollClass);
@@ -17,8 +17,7 @@ function headerScroll() {
 
         if ($(this).scrollTop() >= 120) {
             $topHeader.addClass('header--hide');
-        }
-        else {
+        } else {
             $topHeader.removeClass('header--hide');
             $topHeader.removeClass(scrollClass);
         }
@@ -30,7 +29,7 @@ function headerScroll() {
 
     function checkHeaderPosition() {
         let st = $(this).scrollTop();
-        if (st > lastScrollTop){
+        if (st > lastScrollTop) {
             $topHeader.removeClass(scrollClass);
         } else {
             $topHeader.addClass(scrollClass);
@@ -56,22 +55,36 @@ window.catalogMenu = new menu(
 
 
 function subMenu() {
-    let headerMenuList = $('.header__menu li');
-    if(headerMenuList.find('.header__sub-wrapper').length){
-        headerMenuList.each(function(index, item) {
-            $(item).hover(()=> {
-                hoverElem($(item));
-                // $(item).find('.header__sub-wrapper').slideToggle()
-            })
+    let headerMenuList = $('.menu > li');
+    let heightList = [];
+    let heightSubMenu;
+    if (headerMenuList.find('.sub-menu').length) {
+        headerMenuList.each(function (index, item) {
+
+            heightList.push($(item).find('.sub-menu').height())
+
+            if ($(item).find('.sub-menu').length) {
+                heightSubMenu = $(item).find('.sub-menu').height();
+                $(item).find('.sub-menu').height(0)
+                $(item).find('.sub-menu').css({"position": "absolute"})
+            }
+
+            $(item).hover(function () {
+                    if ($(item).find('.sub-menu').length) {
+                        $('.menu').css({"padding-bottom": heightList[index]})
+                        $(item).find('.sub-menu').height(heightList[index])
+                    }
+                },
+                function () {
+                    if ($(item).find('.sub-menu').length) {
+                        $(item).find('.sub-menu').height(0)
+                        $('.menu').css({"padding-bottom": 0})
+                    }
+                }
+            )
+
         });
     }
-    function hoverElem(element) {
-        let hoverNow = false;
-        if(!hoverNow) {
-            element.find('.header__sub-wrapper').slideToggle(270)
-            hoverNow = true;
-        }
-
-    }
 }
+
 subMenu();

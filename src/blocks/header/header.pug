@@ -4,23 +4,35 @@ header.header
             a(href="/").logo
                 +img("src/blocks/header/assets/img/logo.svg", "logo__image", "Logo")
             .header__right-wrapper
-                ul.header__menu
+                ul.header__menu.menu
                     li
                         a(href="#") Mission
                     li
                         a(href="#") Offerings
                     li
                         a(href="#") Lookbook
+                        ul.sub-menu
+                            li
+                                a(href="#") Lookbook Lookbook Lookbook Lookbook
+                            li
+                                a(href="#") Lookbook
+                            li
+                                a(href="#") Lookbook
                     li
                         a(href="#") Order
                     li
                         a(href="#") Blog
                     li
                         a(href="#") Get Started
-                        .header__sub-wrapper
-                            ul.header__sub-menu
-                                li
-                                    a(href="#") FAQ
+                        ul.sub-menu
+                            li
+                                a(href="#") FAQ
+                            li
+                                a(href="#") FAQ
+                            li
+                                a(href="#") FAQ
+                            li
+                                a(href="#") FAQ
                 .header__search
                     button.header__search-button
                         +iconSvg("75px", "75px", "icon-search")

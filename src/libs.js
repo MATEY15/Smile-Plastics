@@ -7,8 +7,8 @@ window.$ = $;
 
 window.mobileWidth = 1279;
 window.mobileWidthSmall = 768;
-
-// Подключение кастомных глобальных переменных и универсальных функций
+require('../../../libs/js/TweenMax.min.js');
+require('../../../libs/js/cursor-pointer.js');
 require('../../../libs/js/customLib.js');
 
 // Подключение плагинов
